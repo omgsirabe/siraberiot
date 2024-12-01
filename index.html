@@ -20,7 +20,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 30px; /* Increased the height to ensure full GIF visibility */
+            height: 100px; /* Increased height */
             background-image: url('https://howlingforjustice.wordpress.com/wp-content/uploads/2012/01/blood-drip-2.gif');
             background-size: cover;
             z-index: 1000;
@@ -30,93 +30,86 @@
         .navbar {
             background-color: black;
             color: white;
-            padding: 20px;
+            padding: 50px; /* Increased padding */
             text-align: center;
-            border-bottom: 2px solid white;
+            border-bottom: 6px solid white;
         }
 
         .navbar a {
             color: white;
-            font-size: 18px;
-            margin: 0 20px;
+            font-size: 50px; /* Larger font size */
+            margin: 0 60px; /* Increased spacing */
             text-decoration: none;
             text-transform: uppercase;
         }
 
-        /* Logo and Drop Down Menu */
+        /* Logo */
         .logo {
-            margin-top: 50px;
+            margin-top: 150px; /* Larger spacing */
         }
 
         .logo img {
-            height: 150px; /* Increased size of logo */
-        }
-
-        .menu {
-            display: flex; /* Use flexbox to align the menu items horizontally */
-            justify-content: center; /* Center the items */
-            margin-top: 20px;
-        }
-
-        .menu a {
-            margin: 0 15px; /* Adjust spacing between items */
+            height: 400px; /* Larger logo */
         }
 
         /* Social Media Icons */
         .social-icons img {
-            width: 30px;
-            margin: 0 10px;
+            width: 100px; /* Larger icon size */
+            margin: 0 30px;
         }
 
         /* Upcoming Release Section */
         .upcoming-release {
-            margin-top: 50px;
-            border-top: 1px solid white;
-            padding-top: 50px;
+            margin-top: 150px;
+            border-top: 6px solid white;
+            padding-top: 100px;
         }
 
         .cover-art {
-            border: 3px solid red;
+            border: 10px solid red; /* Thicker border */
             display: inline-block;
-            margin: 20px;
+            margin: 50px;
+        }
+
+        .cover-art img {
+            width: 800px; /* Larger cover art */
         }
 
         .pre-save-btn {
-            font-size: 20px;
+            font-size: 50px; /* Larger button text */
             color: red;
             text-decoration: none;
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 30px;
         }
 
         /* Shows Section */
         .shows {
-            margin-top: 50px;
-            border-top: 1px solid white;
-            padding-top: 50px;
+            margin-top: 150px;
+            border-top: 6px solid white;
+            padding-top: 100px;
+        }
+
+        .shows h2 {
+            font-size: 60px; /* Larger title */
         }
 
         /* Footer */
         .footer {
-            margin-top: 50px;
-            font-size: 14px;
+            margin-top: 100px;
+            font-size: 40px; /* Larger footer text */
         }
 
-        /* Custom Cursor */
-        body {
-            cursor: url('https://i.ibb.co/26ySpxQ/IMG-9482.png'), auto;
-        }
-
-        /* Bloody Knife Size */
+        /* Bloody Knife */
         .bloody-knife img {
-            width: 30px; /* Adjust size to match the text */
-            margin-top: 10px;
+            width: 80px; /* Larger knife */
+            margin-top: 30px;
         }
 
         /* Bloody Amerika Logo */
         .bloody-amerika-logo img {
-            width: 250px; /* Adjusted logo size */
-            margin-top: 20px;
+            width: 700px; /* Larger logo */
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -132,13 +125,13 @@
         </div>
         <div class="menu">
             <a href="#">Home</a>
-            <a href="#music">Music</a> <!-- Changed to scroll down to the music section -->
-            <a href="#shows">Shows</a> <!-- Changed to scroll down to the shows section -->
+            <a href="#social-media">Music</a>
+            <a href="#shows">Shows</a>
         </div>
     </div>
 
-    <!-- Social Media Icons Section -->
-    <div id="music" class="social-icons"> <!-- Added id to enable scrolling -->
+    <!-- Social Media Icons -->
+    <div id="social-media" class="social-icons">
         <a href="https://www.instagram.com/omgsirabe/"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
         <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
         <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"></a>
@@ -153,25 +146,26 @@
 
     <!-- Upcoming Release Section -->
     <div class="upcoming-release">
-        <h2>Upcoming Release</h2>
+        <h2 style="font-size: 60px;">Upcoming Release</h2>
         <div class="cover-art">
-            <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art" width="300">
+            <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art">
         </div>
-        <h3>15 TRACKS, RELEASES DECEMBER 6TH</h3>
+        <h3 style="font-size: 50px;">15 TRACKS, RELEASES DECEMBER 6TH</h3>
         <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="pre-save-btn">CLICK ME TO PRE SAVE</a>
         <div class="bloody-knife">
             <img src="https://art.ngfiles.com/images/1224000/1224704_sinlessshadow_bloody-knife.gif?f1586116158" alt="Bloody Knife">
         </div>
     </div>
 
-    <!-- Shows Coming Soon Section -->
-    <div id="shows" class="shows"> <!-- Added id to enable scrolling -->
-        <h2 style="font-size: 40px;">SHOWS COMING SOON</h2>
+    <!-- Shows Section -->
+    <div id="shows" class="shows">
+        <h2>Shows Coming Soon</h2>
+        <p style="font-size: 40px;">Check back later for updates!</p>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        <p>© 2024 $IR ABE</p>
+        <p>&copy; 2024 Bloody Amerika. All Rights Reserved.</p>
     </div>
 
 </body>
