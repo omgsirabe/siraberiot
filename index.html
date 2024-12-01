@@ -1,165 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bloody Amerika</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: 'Impact', sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-
-    /* Blood Drip Animation */
-    #blood-drip {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-    }
-
-    /* Header Section */
-    header {
-      position: relative;
-      padding: 10px 20px;
-      background-color: black;
-      z-index: 2;
-    }
-
-    .logo {
-      max-width: 200px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 10px;
-      border-bottom: 2px solid white;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 18px;
-      text-transform: uppercase;
-    }
-
-    nav a:hover {
-      color: red;
-    }
-
-    .section {
-      padding: 50px 20px;
-      text-align: center;
-      border-bottom: 2px solid white;
-    }
-
-    /* Upcoming Release */
-    .release-section img {
-      border: 5px solid red;
-      max-width: 300px;
-      display: block;
-      margin: 20px auto;
-    }
-
-    .release-section .cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .release-section .cta img {
-      max-width: 50px;
-    }
-
-    .release-section .cta a {
-      color: red;
-      font-size: 18px;
-      text-decoration: none;
-    }
-
-    .release-section .cta a:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: black;
-    }
-
-    footer .socials img {
-      max-width: 50px;
-      margin: 10px;
-    }
-
-    footer .socials a {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      font-size: 14px;
-    }
-
-    .shows {
-      font-size: 30px;
-      margin-top: 20px;
-      color: red;
-    }
-
-    .cursor {
-      cursor: url('https://i.ibb.co/26ySpxQ/IMG-9482.png'), auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloody Amerika</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Impact', sans-serif;
+            background-color: black;
+            color: white;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        /* Top Bar */
+        .top-bar {
+            background-color: black;
+            position: relative;
+            text-align: center;
+            padding: 20px 10px;
+            border-bottom: 2px solid white;
+        }
+        .top-bar img {
+            max-height: 50px;
+        }
+        .dropdown-menu {
+            margin-top: 10px;
+        }
+        .dropdown-menu a {
+            margin: 0 15px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        /* Dripping Blood */
+        .blood-drip {
+            width: 100%;
+            height: auto;
+        }
+        /* Upcoming Release Section */
+        .upcoming-release {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .upcoming-release img {
+            max-width: 300px;
+            border: 5px solid red;
+            margin-top: 10px;
+        }
+        .knife-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .knife-link img {
+            width: 40px;
+            height: auto;
+            margin-left: 10px;
+        }
+        /* Social Media Section */
+        .social-media {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .social-media img {
+            height: 40px;
+            margin: 0 10px;
+        }
+        .social-media a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        /* Shows Section */
+        .shows-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .shows-section h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .shows-section small {
+            display: block;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+        /* Cursor */
+        body {
+            cursor: url('https://i.ibb.co/26ySpxQ/IMG-9482.png'), auto;
+        }
+    </style>
 </head>
-<body class="cursor">
-  <!-- Blood Drip -->
-  <img id="blood-drip" src="https://howlingforjustice.wordpress.com/wp-content/uploads/2012/01/blood-drip-2.gif" alt="Blood Drip">
-
-  <!-- Header -->
-  <header>
-    <img class="logo" src="https://i.ibb.co/mR1vDL0/9-EA294-CD-0-A33-4-ED1-A12-B-74-AAF3297-B2-C.png" alt="Logo">
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#music">Music</a>
-      <a href="#shows">Shows</a>
-    </nav>
-  </header>
-
-  <!-- Upcoming Release -->
-  <section id="home" class="section release-section">
-    <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo">
-    <h2>15 TRACKS, RELEASES DECEMBER 6TH</h2>
-    <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art">
-    <div class="cta">
-      <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2">CLICK ME TO PRE SAVE</a>
-      <img src="https://art.ngfiles.com/images/1224000/1224704_sinlessshadow_bloody-knife.gif?f1586116158" alt="Bloody Knife">
+<body>
+    <!-- Dripping Blood -->
+    <img src="https://howlingforjustice.wordpress.com/wp-content/uploads/2012/01/blood-drip-2.gif" alt="Blood Dripping" class="blood-drip">
+    
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <img src="https://i.ibb.co/mR1vDL0/9-EA294-CD-0-A33-4-ED1-A12-B-74-AAF3297-B2-C.png" alt="Logo">
+        <div class="dropdown-menu">
+            <a href="#home">Home</a>
+            <a href="#music">Music</a>
+            <a href="#shows">Shows</a>
+        </div>
     </div>
-  </section>
 
-  <!-- Shows Coming Soon -->
-  <section id="shows" class="section">
-    <h1 class="shows">SHOWS COMING SOON</h1>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="socials">
-      <a href="https://www.instagram.com/omgsirabe/"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"> Instagram</a>
-      <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"> Spotify</a>
-      <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"> Apple Music</a>
-      <a href="https://youtube.com/@sogothimded?feature=shared"><img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube"> YouTube</a>
-      <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"> SoundCloud</a>
+    <!-- Social Media Links -->
+    <div class="social-media container">
+        <a href="https://www.instagram.com/omgsirabe/"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
+        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
+        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"></a>
+        <a href="https://youtube.com/@sogothimded?feature=shared"><img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube"></a>
+        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
     </div>
-    <p>© 2024 $IR ABE</p>
-  </footer>
+
+    <!-- Upcoming Release -->
+    <div class="upcoming-release container" id="music">
+        <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo">
+        <h2>15 TRACKS, RELEASES DECEMBER 6TH</h2>
+        <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art">
+        <div class="knife-link">
+            <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2">CLICK ME TO PRE SAVE</a>
+            <img src="https://art.ngfiles.com/images/1224000/1224704_sinlessshadow_bloody-knife.gif?f1586116158" alt="Knife">
+        </div>
+    </div>
+
+    <!-- Shows Section -->
+    <div class="shows-section" id="shows">
+        <h1>SHOWS COMING SOON</h1>
+        <small>© 2024 $IR ABE</small>
+    </div>
 </body>
 </html>
