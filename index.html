@@ -6,125 +6,129 @@
     <title>$IR ABE</title>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
             background-color: black;
             color: white;
-            font-family: 'Impact', sans-serif;
             text-align: center;
             margin: 0;
-            padding-top: 100px;
+            padding: 0;
+            overflow-x: hidden;
         }
-        /* Blood Drip Effect */
-        .blood {
+
+        header {
+            position: relative;
+        }
+
+        #blood {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
+            z-index: -1;
+        }
+
+        .logo img {
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .social-media img {
+            width: 50px;
             height: 50px;
-            background: url('https://i.ibb.co/djvFyBx/blood-drip.gif') no-repeat center;
-            background-size: cover;
-        }
-        .logo {
-            width: auto;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-            max-width: 90%; /* Make the logos smaller but no cropping */
-        }
-        .social-links img {
-            width: 40px;
             margin: 10px;
-        }
-        .social-links a {
-            text-decoration: none;
-            color: white;
-        }
-        .section {
-            margin-top: 30px;
-            border-top: 2px solid white;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-        .upcoming-release img {
-            width: auto;
-            max-width: 80%;
-            margin: 20px 0;
-        }
-        .dropdown-menu {
-            margin: 20px auto;
-            background-color: black;
-            color: white;
-            padding: 10px;
-            text-align: left;
             display: inline-block;
-            width: 200px;
         }
-        .dropdown-menu select {
-            background-color: black;
+
+        .link-section a {
             color: white;
-            border: none;
-            font-size: 16px;
-            padding: 5px;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 15px 0;
+            display: block;
+            font-weight: bold;
+        }
+
+        .upcoming-release {
+            margin-top: 50px;
+        }
+
+        .upcoming-release img {
+            max-width: 300px;
             width: 100%;
         }
-        .footer {
-            margin-top: 50px;
+
+        .pre-save a {
+            color: red;
             font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
         }
-        .footer .bold-text {
+
+        footer {
+            margin-top: 100px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        footer .big-text {
             font-size: 30px;
             font-weight: bold;
+        }
+
+        footer .small-text {
+            font-size: 14px;
+        }
+
+        hr {
+            border-color: white;
+            width: 80%;
+            margin: 20px auto;
         }
     </style>
 </head>
 <body>
-    <!-- Blood Dripping Effect -->
-    <div class="blood"></div>
-    
-    <!-- Header with Logo -->
-    <img src="https://i.ibb.co/BgB3SgD/Logo.png" alt="Logo" class="logo">
 
-    <!-- Drop-down Menu -->
-    <div class="dropdown-menu">
-        <label for="menu">Select a Page:</label>
-        <select id="menu">
-            <option value="home">Home</option>
-            <option value="music">Music</option>
-            <option value="shows">Shows</option>
-        </select>
+<header>
+    <img id="blood" src="https://img1.picmix.com/output/stamp/normal/3/8/7/4/1364783_36c2a.gif" alt="Blood Drip">
+    <div class="logo">
+        <img src="https://ibb.co/BgB3SgD" alt="Logo">
     </div>
+</header>
 
-    <!-- Social Media Links -->
-    <div class="social-links">
-        <a href="https://www.instagram.com/omgsirabe/" target="_blank">
-            <img src="https://i.ibb.co/Jm1bfdy/instagram-icon.png" alt="Instagram">
-        </a>
-        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q" target="_blank">
-            <img src="https://i.ibb.co/gTvCNVp/spotify-icon.png" alt="Spotify">
-        </a>
-        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116" target="_blank">
-            <img src="https://i.ibb.co/7nkXyRX/apple-music-icon.png" alt="Apple Music">
-        </a>
-        <a href="https://youtube.com/@sogothimded?feature=shared" target="_blank">
-            <img src="https://i.ibb.co/TLm0Wpd/youtube-icon.png" alt="YouTube">
-        </a>
-        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9" target="_blank">
-            <img src="https://i.ibb.co/DphFJLr/soundcloud-icon.png" alt="SoundCloud">
-        </a>
-    </div>
+<div class="link-section">
+    <a href="https://www.instagram.com/omgsirabe/" target="_blank">
+        <img src="https://ibb.co/Jm1bfdy" alt="Instagram">
+    </a>
+    <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q" target="_blank">
+        <img src="https://ibb.co/gTvCNVp" alt="Spotify">
+    </a>
+    <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116" target="_blank">
+        <img src="https://ibb.co/7nkXyRX" alt="Apple Music">
+    </a>
+    <a href="https://youtube.com/@sogothimded?feature=shared" target="_blank">
+        <img src="https://ibb.co/TLm0Wpd" alt="YouTube">
+    </a>
+    <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9" target="_blank">
+        <img src="https://ibb.co/DphFJLr" alt="SoundCloud">
+    </a>
+</div>
 
-    <!-- Upcoming Release Section -->
-    <div class="section upcoming-release">
-        <h2>Upcoming Release</h2>
-        <img src="https://i.ibb.co/LNrxRQc/bloodyamerika-cover.jpg" alt="Bloody Amerika Cover Art">
-        <p><strong>15 TRACKS, RELEASES DECEMBER 6TH</strong></p>
-        <img src="https://i.ibb.co/BNkjTL9/bloodyamerika-logo.jpg" alt="Bloody Amerika Logo">
-        <p><a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" target="_blank" style="color:white; text-decoration:none;">Click me to pre-save</a></p>
+<div class="upcoming-release">
+    <h2>Upcoming Release: Bloody Amerika</h2>
+    <img src="https://ibb.co/LNrxRQc" alt="Bloody Amerika Cover Art">
+    <div class="pre-save">
+        <p>Click me to pre-save:</p>
+        <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" target="_blank">Pre-save Bloody Amerika</a>
     </div>
+</div>
 
-    <!-- Footer Section -->
-    <div class="footer">
-        <p class="bold-text">SHOWS COMING SOON</p>
-        <p>© 2024 $IR ABE</p>
-    </div>
+<hr>
+
+<footer>
+    <p class="big-text">SHOWS COMING SOON</p>
+    <p class="small-text">© 2024 $IR ABE</p>
+</footer>
+
 </body>
 </html>
