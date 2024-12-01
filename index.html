@@ -11,6 +11,7 @@
             font-family: 'Impact', sans-serif;
             background-color: black;
             color: white;
+            text-align: center;
         }
         a {
             text-decoration: none;
@@ -23,20 +24,18 @@
         /* Top Bar */
         .top-bar {
             background-color: black;
-            position: relative;
-            text-align: center;
-            padding: 20px 10px;
+            padding: 20px 0;
             border-bottom: 2px solid white;
         }
         .top-bar img {
-            max-height: 50px;
+            max-height: 100px;
         }
         .dropdown-menu {
             margin-top: 10px;
         }
         .dropdown-menu a {
-            margin: 0 15px;
-            font-size: 18px;
+            margin: 0 20px;
+            font-size: 20px;
             text-transform: uppercase;
         }
         /* Dripping Blood */
@@ -46,13 +45,16 @@
         }
         /* Upcoming Release Section */
         .upcoming-release {
-            text-align: center;
             margin: 40px 0;
         }
-        .upcoming-release img {
+        .upcoming-release img.cover-art {
             max-width: 300px;
             border: 5px solid red;
             margin-top: 10px;
+        }
+        .upcoming-release img.logo {
+            max-width: 200px;
+            margin: 20px 0;
         }
         .knife-link {
             display: flex;
@@ -61,18 +63,17 @@
             margin-top: 15px;
         }
         .knife-link img {
-            width: 40px;
+            width: 50px;
             height: auto;
             margin-left: 10px;
         }
         /* Social Media Section */
         .social-media {
-            text-align: center;
             margin: 40px 0;
         }
         .social-media img {
-            height: 40px;
-            margin: 0 10px;
+            height: 60px;
+            margin: 0 15px;
         }
         .social-media a {
             display: inline-block;
@@ -81,7 +82,6 @@
         }
         /* Shows Section */
         .shows-section {
-            text-align: center;
             margin-top: 40px;
         }
         .shows-section h1 {
@@ -116,21 +116,31 @@
 
     <!-- Social Media Links -->
     <div class="social-media container">
-        <a href="https://www.instagram.com/omgsirabe/"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
-        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
-        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"></a>
-        <a href="https://youtube.com/@sogothimded?feature=shared"><img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube"></a>
-        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
+        <a href="https://www.instagram.com/omgsirabe/">
+            <img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram">
+        </a>
+        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q">
+            <img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify">
+        </a>
+        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116">
+            <img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music">
+        </a>
+        <a href="https://youtube.com/@sogothimded?feature=shared">
+            <img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube">
+        </a>
+        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9">
+            <img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud">
+        </a>
     </div>
 
-    <!-- Upcoming Release -->
-    <div class="upcoming-release container" id="music">
-        <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo">
+    <!-- Upcoming Release Section -->
+    <div class="upcoming-release">
+        <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo" class="logo">
         <h2>15 TRACKS, RELEASES DECEMBER 6TH</h2>
-        <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art">
+        <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art" class="cover-art">
         <div class="knife-link">
             <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2">CLICK ME TO PRE SAVE</a>
-            <img src="https://art.ngfiles.com/images/1224000/1224704_sinlessshadow_bloody-knife.gif?f1586116158" alt="Knife">
+            <img src="https://art.ngfiles.com/images/1224000/1224704_sinlessshadow_bloody-knife.gif?f1586116158" alt="Bloody Knife">
         </div>
     </div>
 
