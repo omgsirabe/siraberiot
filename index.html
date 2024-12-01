@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$IR ABE - Bloody Amerika</title>
+    <style>
+        /* General body styling */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace; /* Vintage impactful font */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden; /* Prevent scrolling */
+        }
+
+        /* Blood Drip Effect at the top */
+        .header {
+            background: url('https://i.ibb.co/djvFyBx') no-repeat top center;
+            height: 200px;
+            background-size: cover;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Main Navbar with Logo */
+        .navbar {
+            background-color: black;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); /* Subtle red shadow effect */
+            z-index: 20;
+            position: relative;
+        }
+        .navbar img {
+            width: 250px; /* Adjust size for logo */
+        }
+
+        /* Menu Links */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background-color: #B22222; /* Dark red for contrast */
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); /* Shadow for added depth */
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .menu a:hover {
+            color: #FF4500; /* Orange-red hover effect */
+        }
+
+        /* Social Media Links */
+        .social-links {
+            margin-top: 50px;
+        }
+        .social-links img {
+            width: 60px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        .social-links img:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
+        /* Upcoming Release Section */
+        .release-section {
+            margin-top: 80px;
+            background-color: #333;
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid #B22222;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+        }
+        .release-section img {
+            max-width: 350px;
+            margin-bottom: 20px;
+        }
+        .release-section h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #FF4500;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Section */
+        .footer {
+            margin-top: 100px;
+            padding: 40px 0;
+            background-color: #222;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 -4px 10px rgba(255, 0, 0, 0.3);
+        }
+        .footer h2 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #FF4500;
+        }
+        .footer p {
+            font-size: 14px;
+            color: white;
+        }
+
+        /* Custom Cursor */
+        body {
+            cursor: url('https://i.ibb.co/djvFyBx'), auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .release-section {
+                padding: 20px;
+            }
+
+            .footer h2 {
+                font-size: 40px;
+            }
+
+            .social-links img {
+                width: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Logo and Blood Drip -->
+    <div class="header"></div>
+    <div class="navbar">
+        <img src="https://i.ibb.co/BgB3SgD" alt="Logo">
+    </div>
+
+    <!-- Menu Links -->
+    <div class="menu">
+        <a href="https://www.instagram.com/omgsirabe/">Instagram</a>
+        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q">Spotify</a>
+        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116">Apple Music</a>
+        <a href="https://youtube.com/@sogothimded?feature=shared">YouTube</a>
+        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9">SoundCloud</a>
+    </div>
+
+    <!-- Social Media Links Section -->
+    <div class="social-links">
+        <a href="https://www.instagram.com/omgsirabe/">
+            <img src="https://i.ibb.co/Jm1bfdy" alt="Instagram Logo">
+        </a>
+        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q">
+            <img src="https://i.ibb.co/gTvCNVp" alt="Spotify Logo">
+        </a>
+        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116">
+            <img src="https://i.ibb.co/7nkXyRX" alt="Apple Music Logo">
+        </a>
+        <a href="https://youtube.com/@sogothimded?feature=shared">
+            <img src="https://i.ibb.co/TLm0Wpd" alt="YouTube Logo">
+        </a>
+        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9">
+            <img src="https://i.ibb.co/DphFJLr" alt="SoundCloud Logo">
+        </a>
+    </div>
+
+    <!-- Upcoming Release Section -->
+    <div class="release-section">
+        <img src="https://i.ibb.co/LNrxRQc" alt="Bloody Amerika Cover">
+        <h2>15 TRACKS, RELEASES DECEMBER 6TH</h2>
+        <a href="https://linktothepresave.com" target="_blank">
+            <button style="background-color: #FF4500; color: white; padding: 10px 20px; font-size: 18px; border: none; cursor: pointer; border-radius: 5px;">
+                Pre-Save Bloody Amerika
+            </button>
+        </a>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <h2>SHOWS COMING SOON</h2>
+        <p>© 2024 $IR ABE</p>
+    </div>
+
+</body>
+</html>
