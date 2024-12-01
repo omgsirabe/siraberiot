@@ -1,134 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$IR ABE</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: black;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloody Amerika</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Impact', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
 
-        header {
-            position: relative;
-        }
+    /* Blood Drip Animation */
+    #blood-drip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
 
-        #blood {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: -1;
-        }
+    /* Header Section */
+    header {
+      position: relative;
+      padding: 10px 20px;
+      background-color: black;
+      z-index: 2;
+    }
 
-        .logo img {
-            max-width: 400px;
-            width: 100%;
-            margin: 0 auto;
-        }
+    .logo {
+      max-width: 200px;
+      display: block;
+      margin: 0 auto;
+    }
 
-        .social-media img {
-            width: 50px;
-            height: 50px;
-            margin: 10px;
-            display: inline-block;
-        }
+    nav {
+      text-align: center;
+      margin-top: 10px;
+      border-bottom: 2px solid white;
+    }
 
-        .link-section a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            margin: 15px 0;
-            display: block;
-            font-weight: bold;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
 
-        .upcoming-release {
-            margin-top: 50px;
-        }
+    nav a:hover {
+      color: red;
+    }
 
-        .upcoming-release img {
-            max-width: 300px;
-            width: 100%;
-        }
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 2px solid white;
+    }
 
-        .pre-save a {
-            color: red;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    /* Upcoming Release */
+    .release-section img {
+      border: 5px solid red;
+      max-width: 300px;
+      display: block;
+      margin: 20px auto;
+    }
 
-        footer {
-            margin-top: 100px;
-            font-size: 18px;
-            text-align: center;
-        }
+    .release-section .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
 
-        footer .big-text {
-            font-size: 30px;
-            font-weight: bold;
-        }
+    .release-section .cta img {
+      max-width: 50px;
+    }
 
-        footer .small-text {
-            font-size: 14px;
-        }
+    .release-section .cta a {
+      color: red;
+      font-size: 18px;
+      text-decoration: none;
+    }
 
-        hr {
-            border-color: white;
-            width: 80%;
-            margin: 20px auto;
-        }
-    </style>
+    .release-section .cta a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: black;
+    }
+
+    footer .socials img {
+      max-width: 50px;
+      margin: 10px;
+    }
+
+    footer .socials a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+    .shows {
+      font-size: 30px;
+      margin-top: 20px;
+      color: red;
+    }
+
+    .cursor {
+      cursor: url('https://i.ibb.co/26ySpxQ/IMG-9482.png'), auto;
+    }
+  </style>
 </head>
-<body>
+<body class="cursor">
+  <!-- Blood Drip -->
+  <img id="blood-drip" src="https://howlingforjustice.wordpress.com/wp-content/uploads/2012/01/blood-drip-2.gif" alt="Blood Drip">
 
-<header>
-    <img id="blood" src="https://img1.picmix.com/output/stamp/normal/3/8/7/4/1364783_36c2a.gif" alt="Blood Drip">
-    <div class="logo">
-        <img src="https://ibb.co/BgB3SgD" alt="Logo">
+  <!-- Header -->
+  <header>
+    <img class="logo" src="https://i.ibb.co/mR1vDL0/9-EA294-CD-0-A33-4-ED1-A12-B-74-AAF3297-B2-C.png" alt="Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#music">Music</a>
+      <a href="#shows">Shows</a>
+    </nav>
+  </header>
+
+  <!-- Upcoming Release -->
+  <section id="home" class="section release-section">
+    <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo">
+    <h2>15 TRACKS, RELEASES DECEMBER 6TH</h2>
+    <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art">
+    <div class="cta">
+      <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2">CLICK ME TO PRE SAVE</a>
+      <img src="https://art.ngfiles.com/images/1224000/1224704_sinlessshadow_bloody-knife.gif?f1586116158" alt="Bloody Knife">
     </div>
-</header>
+  </section>
 
-<div class="link-section">
-    <a href="https://www.instagram.com/omgsirabe/" target="_blank">
-        <img src="https://ibb.co/Jm1bfdy" alt="Instagram">
-    </a>
-    <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q" target="_blank">
-        <img src="https://ibb.co/gTvCNVp" alt="Spotify">
-    </a>
-    <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116" target="_blank">
-        <img src="https://ibb.co/7nkXyRX" alt="Apple Music">
-    </a>
-    <a href="https://youtube.com/@sogothimded?feature=shared" target="_blank">
-        <img src="https://ibb.co/TLm0Wpd" alt="YouTube">
-    </a>
-    <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9" target="_blank">
-        <img src="https://ibb.co/DphFJLr" alt="SoundCloud">
-    </a>
-</div>
+  <!-- Shows Coming Soon -->
+  <section id="shows" class="section">
+    <h1 class="shows">SHOWS COMING SOON</h1>
+  </section>
 
-<div class="upcoming-release">
-    <h2>Upcoming Release: Bloody Amerika</h2>
-    <img src="https://ibb.co/LNrxRQc" alt="Bloody Amerika Cover Art">
-    <div class="pre-save">
-        <p>Click me to pre-save:</p>
-        <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" target="_blank">Pre-save Bloody Amerika</a>
+  <!-- Footer -->
+  <footer>
+    <div class="socials">
+      <a href="https://www.instagram.com/omgsirabe/"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"> Instagram</a>
+      <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"> Spotify</a>
+      <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"> Apple Music</a>
+      <a href="https://youtube.com/@sogothimded?feature=shared"><img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube"> YouTube</a>
+      <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"> SoundCloud</a>
     </div>
-</div>
-
-<hr>
-
-<footer>
-    <p class="big-text">SHOWS COMING SOON</p>
-    <p class="small-text">© 2024 $IR ABE</p>
-</footer>
-
+    <p>© 2024 $IR ABE</p>
+  </footer>
 </body>
 </html>
