@@ -13,11 +13,6 @@
             margin: 0;
             padding-top: 100px;
         }
-        .logo {
-            width: 250px;
-            margin: 20px auto;
-            display: block;
-        }
         /* Blood Drip Effect */
         .blood {
             position: absolute;
@@ -27,6 +22,12 @@
             height: 50px;
             background: url('https://i.ibb.co/djvFyBx/blood-drip.gif') no-repeat center;
             background-size: cover;
+        }
+        .logo {
+            width: auto;
+            height: auto;
+            margin: 20px auto;
+            display: block;
         }
         .social-links img {
             width: 40px;
@@ -38,10 +39,31 @@
         }
         .section {
             margin-top: 30px;
+            border-top: 2px solid white;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
         .upcoming-release img {
-            width: 200px;
+            width: auto;
+            max-width: 80%;
             margin: 20px 0;
+        }
+        .dropdown-menu {
+            margin: 20px auto;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            display: inline-block;
+            width: 200px;
+        }
+        .dropdown-menu select {
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 16px;
+            padding: 5px;
+            width: 100%;
         }
         .footer {
             margin-top: 50px;
@@ -59,6 +81,16 @@
     
     <!-- Header with Logo -->
     <img src="https://i.ibb.co/BgB3SgD/Logo.png" alt="Logo" class="logo">
+
+    <!-- Drop-down Menu -->
+    <div class="dropdown-menu">
+        <label for="menu">Select a Page:</label>
+        <select id="menu">
+            <option value="home">Home</option>
+            <option value="music">Music</option>
+            <option value="shows">Shows</option>
+        </select>
+    </div>
 
     <!-- Social Media Links -->
     <div class="social-links">
@@ -85,6 +117,7 @@
         <img src="https://i.ibb.co/LNrxRQc/bloodyamerika-cover.jpg" alt="Bloody Amerika Cover Art">
         <p><strong>15 TRACKS, RELEASES DECEMBER 6TH</strong></p>
         <img src="https://i.ibb.co/BNkjTL9/bloodyamerika-logo.jpg" alt="Bloody Amerika Logo">
+        <p><a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" target="_blank" style="color:white; text-decoration:none;">Pre-saved now</a></p>
     </div>
 
     <!-- Footer Section -->
