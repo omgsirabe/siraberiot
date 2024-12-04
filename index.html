@@ -12,6 +12,7 @@
             background-color: black;
             color: white;
             text-align: center;
+            cursor: url('https://i.ibb.co/X3ft2d1/IMG-9476.png'), auto; /* Custom cursor applied here */
         }
 
         /* Blood Drip Effect */
@@ -20,7 +21,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 30px; /* Increased the height to ensure full GIF visibility */
+            height: 30px;
             background-image: url('https://howlingforjustice.wordpress.com/wp-content/uploads/2012/01/blood-drip-2.gif');
             background-size: cover;
             z-index: 1000;
@@ -49,17 +50,17 @@
         }
 
         .logo img {
-            height: 150px; /* Increased size of logo */
+            height: 150px;
         }
 
         .menu {
-            display: flex; /* Use flexbox to align the menu items horizontally */
-            justify-content: center; /* Center the items */
+            display: flex;
+            justify-content: center;
             margin-top: 20px;
         }
 
         .menu a {
-            margin: 0 15px; /* Adjust spacing between items */
+            margin: 0 15px;
         }
 
         /* Social Media Icons */
@@ -102,21 +103,27 @@
             font-size: 14px;
         }
 
-        /* Custom Cursor */
-        body {
-            cursor: url('https://i.ibb.co/26ySpxQ/IMG-9482.png'), auto;
-        }
-
         /* Bloody Knife Size */
         .bloody-knife img {
-            width: 30px; /* Adjust size to match the text */
+            width: 30px;
             margin-top: 10px;
         }
 
         /* Bloody Amerika Logo */
         .bloody-amerika-logo img {
-            width: 250px; /* Adjusted logo size */
+            width: 250px;
             margin-top: 20px;
+        }
+
+        /* GIF Flags for Menu */
+        .menu::before, .menu::after {
+            content: '';
+            display: inline-block;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif');
+            background-size: cover;
+            width: 50px;
+            height: 35px;
+            margin: 0 10px;
         }
     </style>
 </head>
@@ -132,13 +139,13 @@
         </div>
         <div class="menu">
             <a href="#">Home</a>
-            <a href="#music">Music</a> <!-- Changed to scroll down to the music section -->
-            <a href="#shows">Shows</a> <!-- Changed to scroll down to the shows section -->
+            <a href="#music">Music</a>
+            <a href="#shows">Shows</a>
         </div>
     </div>
 
     <!-- Social Media Icons Section -->
-    <div id="music" class="social-icons"> <!-- Added id to enable scrolling -->
+    <div id="music" class="social-icons">
         <a href="https://www.instagram.com/omgsirabe/"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
         <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
         <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"></a>
@@ -153,11 +160,10 @@
 
     <!-- Upcoming Release Section -->
     <div class="upcoming-release">
-        <h2>Upcoming Release</h2>
+        <h2>12/6 MIDNIGHT</h2>
         <div class="cover-art">
             <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art" width="300">
         </div>
-        <h3>15 TRACKS, RELEASES DECEMBER 6TH</h3>
         <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="pre-save-btn">CLICK ME TO PRE SAVE</a>
         <div class="bloody-knife">
             <img src="https://art.ngfiles.com/images/1224000/1224704_sinlessshadow_bloody-knife.gif?f1586116158" alt="Bloody Knife">
@@ -165,7 +171,7 @@
     </div>
 
     <!-- Shows Coming Soon Section -->
-    <div id="shows" class="shows"> <!-- Added id to enable scrolling -->
+    <div id="shows" class="shows">
         <h2 style="font-size: 40px;">SHOWS COMING SOON</h2>
     </div>
 
