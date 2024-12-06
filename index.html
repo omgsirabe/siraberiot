@@ -60,19 +60,23 @@
             margin-top: 10px;
         }
 
-        .custom-ticker img {
+        .custom-ticker-container {
+            display: flex;
             position: absolute;
-            width: auto;
-            height: 100%; /* Keeps proportions of the image */
-            animation: customTicker 10s linear infinite;
+            animation: customTickerLoop 10s linear infinite;
+            width: 200%; /* Ensure continuous scrolling by duplicating content */
         }
 
-        @keyframes customTicker {
+        .custom-ticker img {
+            height: 100%; /* Keep proportions of the image */
+        }
+
+        @keyframes customTickerLoop {
             from {
-                transform: translateX(100%);
+                transform: translateX(0);
             }
             to {
-                transform: translateX(-100%);
+                transform: translateX(-50%);
             }
         }
 
@@ -167,7 +171,10 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif" alt="US Flag">
         </div>
         <div class="custom-ticker">
-            <img src="https://i.ibb.co/pQmQdf4/68-FCCA1-F-C7-A1-4-A4-A-B492-9-F79-CD00-B783.png" alt="Custom Ticker">
+            <div class="custom-ticker-container">
+                <img src="https://i.ibb.co/pQmQdf4/68-FCCA1-F-C7-A1-4-A4-A-B492-9-F79-CD00-B783.png" alt="Custom Ticker">
+                <img src="https://i.ibb.co/pQmQdf4/68-FCCA1-F-C7-A1-4-A4-A-B492-9-F79-CD00-B783.png" alt="Custom Ticker">
+            </div>
         </div>
         <div class="moving-banner"></div>
         <div class="menu">
