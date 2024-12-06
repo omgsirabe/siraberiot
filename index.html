@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$ir Abe</title> <!-- Updated title -->
+    <title>$ir Abe</title>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,10 +12,9 @@
             background-color: black;
             color: white;
             text-align: center;
-            cursor: url('https://i.ibb.co/X3ft2d1/IMG-9476.png'), auto; /* Custom cursor applied here */
+            cursor: url('https://i.ibb.co/X3ft2d1/IMG-9476.png'), auto;
         }
 
-        /* Blood Drip Effect */
         .blood-drip {
             position: fixed;
             top: 0;
@@ -27,7 +26,6 @@
             z-index: 1000;
         }
 
-        /* Main Navigation Bar */
         .navbar {
             background-color: black;
             color: white;
@@ -44,13 +42,41 @@
             text-transform: uppercase;
         }
 
-        /* Logo and Drop Down Menu */
         .logo {
-            margin-top: 50px;
+            margin-top: 20px;
+            position: relative;
         }
 
         .logo img {
             height: 150px;
+        }
+
+        .news-ticker {
+            position: relative;
+            background-color: yellow;
+            color: black;
+            margin-top: 10px;
+            overflow: hidden;
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-ticker span {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: ticker 10s linear infinite;
+        }
+
+        .news-ticker span::before, .news-ticker span::after {
+            content: '☆';
+            margin: 0 10px;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
 
         .menu {
@@ -63,79 +89,75 @@
             margin: 0 15px;
         }
 
-        /* Social Media Icons */
         .social-icons img {
             width: 30px;
             margin: 0 10px;
         }
 
-        /* Upcoming Release Section */
-        .upcoming-release {
-            margin-top: 50px;
-            border-top: 1px solid white;
-            padding-top: 50px;
-        }
-
-        .cover-art {
-            border: 3px solid red;
-            display: inline-block;
-            margin: 20px;
-        }
-
-        .pre-save-btn {
-            font-size: 20px;
-            color: red;
-            text-decoration: none;
-            display: inline-block;
+        .bloody-amerika-logo img {
+            width: 250px;
             margin-top: 10px;
         }
 
-        /* Shows Section */
+        .out-now {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        .stream-link {
+            font-size: 20px;
+            color: red;
+            text-decoration: none;
+        }
+
+        .cover-art {
+            border: 3px dotted red;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .extra-image {
+            border: 3px dotted red;
+            margin-top: 15px;
+        }
+
         .shows {
             margin-top: 50px;
             border-top: 1px solid white;
             padding-top: 50px;
         }
 
-        /* Footer */
         .footer {
             margin-top: 50px;
             font-size: 14px;
+            position: relative;
         }
 
-        /* Bloody Knife Size */
-        .bloody-knife img {
-            width: 30px;
-            margin-top: 10px;
+        .moving-banner {
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            height: 40px;
+            background: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518') repeat-x;
+            animation: banner 10s linear infinite;
         }
 
-        /* Bloody Amerika Logo */
-        .bloody-amerika-logo img {
-            width: 250px;
-            margin-top: 20px;
-        }
-
-        /* GIF Flags for Menu */
-        .menu::before, .menu::after {
-            content: '';
-            display: inline-block;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif');
-            background-size: cover;
-            width: 50px;
-            height: 35px;
-            margin: 0 10px;
+        @keyframes banner {
+            from { background-position: 0 0; }
+            to { background-position: -100% 0; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Blood Dripping Effect -->
     <div class="blood-drip"></div>
 
-    <!-- Logo and Navigation Bar -->
     <div class="navbar">
         <div class="logo">
             <img src="https://i.ibb.co/mR1vDL0/9-EA294-CD-0-A33-4-ED1-A12-B-74-AAF3297-B2-C.png" alt="Logo">
+        </div>
+        <div class="news-ticker">
+            <span>WELCOME TO HELL, WE LOVE YOU HERE</span>
         </div>
         <div class="menu">
             <a href="#">Home</a>
@@ -144,7 +166,6 @@
         </div>
     </div>
 
-    <!-- Social Media Icons Section -->
     <div id="music" class="social-icons">
         <a href="https://www.instagram.com/omgsirabe/"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
         <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
@@ -153,31 +174,29 @@
         <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
     </div>
 
-    <!-- Bloody Amerika Logo -->
     <div class="bloody-amerika-logo">
         <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo">
     </div>
 
-    <!-- Upcoming Release Section -->
-    <div class="upcoming-release">
-        <h2>12/6 MIDNIGHT</h2>
-        <div class="cover-art">
-            <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art" width="300">
-        </div>
-        <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="pre-save-btn">CLICK ME TO PRE SAVE</a>
-        <div class="bloody-knife">
-            <img src="https://art.ngfiles.com/images/1224000/1224704_sinlessshadow_bloody-knife.gif?f1586116158" alt="Bloody Knife">
-        </div>
+    <div class="out-now">OUT NOW</div>
+    <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="stream-link">CLICK ME TO STREAM</a>
+
+    <div class="cover-art">
+        <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art" width="300">
     </div>
 
-    <!-- Shows Coming Soon Section -->
+    <div class="extra-image">
+        <img src="https://i.ibb.co/Dr6X0pz/C34-FB930-DCDC-4-CF5-AA23-45-B2-F7-D7499-C.jpg" alt="Extra Image" width="300">
+    </div>
+
     <div id="shows" class="shows">
         <h2 style="font-size: 40px;">SHOWS COMING SOON</h2>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
         <p>© 2024 $IR ABE</p>
+        <div class="moving-banner"></div>
     </div>
+
 </body>
 </html>
