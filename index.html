@@ -12,7 +12,7 @@
             background-color: black;
             color: white;
             text-align: center;
-            overflow-x: hidden;
+            cursor: url('https://i.ibb.co/X3ft2d1/IMG-9476.png'), auto;
         }
 
         .blood-drip {
@@ -43,11 +43,40 @@
         }
 
         .logo {
-            margin-top: 50px;
+            margin-top: 20px;
+            position: relative;
         }
 
         .logo img {
             height: 150px;
+        }
+
+        .news-ticker {
+            position: relative;
+            background-color: yellow;
+            color: black;
+            margin-top: 10px;
+            overflow: hidden;
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-ticker span {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: ticker 10s linear infinite;
+        }
+
+        .news-ticker span::before, .news-ticker span::after {
+            content: '☆';
+            margin: 0 10px;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
 
         .menu {
@@ -65,65 +94,57 @@
             margin: 0 10px;
         }
 
-        .upcoming-release {
-            margin-top: 30px;
-        }
-
         .bloody-amerika-logo img {
             width: 250px;
-            margin: 20px 0;
+            margin-top: 10px;
+        }
+
+        .out-now {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        .stream-link {
+            font-size: 20px;
+            color: red;
+            text-decoration: none;
         }
 
         .cover-art {
-            border: 3px solid red;
+            border: 3px dotted red;
             display: inline-block;
-            margin: 10px 0;
+            margin: 10px;
         }
 
-        .additional-image {
-            border: 2px dotted red;
-            display: inline-block;
-            margin-top: 10px;
+        .extra-image {
+            border: 3px dotted red;
+            margin-top: 15px;
         }
 
-        .news-ticker {
-            background-color: yellow;
-            color: black;
-            padding: 5px 0;
-            margin: 20px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-        }
-
-        .news-ticker span {
-            position: absolute;
-            display: inline-block;
-            white-space: nowrap;
-            animation: ticker 5s linear infinite;
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .stars-banner {
-            background-image: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518');
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 30px;
-            width: 100%;
-            margin-top: 20px;
+        .shows {
+            margin-top: 50px;
+            border-top: 1px solid white;
+            padding-top: 50px;
         }
 
         .footer {
-            margin-top: 10px;
+            margin-top: 50px;
             font-size: 14px;
+            position: relative;
         }
 
-        body {
-            cursor: url('https://i.ibb.co/X3ft2d1/IMG-9476.png'), auto;
+        .moving-banner {
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            height: 40px;
+            background: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518') repeat-x;
+            animation: banner 10s linear infinite;
+        }
+
+        @keyframes banner {
+            from { background-position: 0 0; }
+            to { background-position: -100% 0; }
         }
     </style>
 </head>
@@ -134,6 +155,9 @@
     <div class="navbar">
         <div class="logo">
             <img src="https://i.ibb.co/mR1vDL0/9-EA294-CD-0-A33-4-ED1-A12-B-74-AAF3297-B2-C.png" alt="Logo">
+        </div>
+        <div class="news-ticker">
+            <span>WELCOME TO HELL, WE LOVE YOU HERE</span>
         </div>
         <div class="menu">
             <a href="#">Home</a>
@@ -150,28 +174,29 @@
         <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
     </div>
 
-    <div class="news-ticker">
-        <span>WELCOME TO HELL, WE LOVE YOU HERE ★ WELCOME TO HELL, WE LOVE YOU HERE ★</span>
-    </div>
-
     <div class="bloody-amerika-logo">
         <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo">
-        <h2>OUT NOW</h2>
-        <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" style="color: red; text-decoration: none; font-size: 20px;">CLICK ME TO STREAM</a>
     </div>
+
+    <div class="out-now">OUT NOW</div>
+    <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="stream-link">CLICK ME TO STREAM</a>
 
     <div class="cover-art">
         <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art" width="300">
     </div>
 
-    <div class="additional-image">
-        <img src="https://i.ibb.co/Dr6X0pz/C34-FB930-DCDC-4-CF5-AA23-45-B2-F7-D7499-C.jpg" alt="Additional Image" width="300">
+    <div class="extra-image">
+        <img src="https://i.ibb.co/Dr6X0pz/C34-FB930-DCDC-4-CF5-AA23-45-B2-F7-D7499-C.jpg" alt="Extra Image" width="300">
     </div>
 
-    <div id="shows" class="stars-banner"></div>
+    <div id="shows" class="shows">
+        <h2 style="font-size: 40px;">SHOWS COMING SOON</h2>
+    </div>
 
     <div class="footer">
         <p>© 2024 $IR ABE</p>
+        <div class="moving-banner"></div>
     </div>
+
 </body>
 </html>
