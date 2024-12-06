@@ -3,59 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$ir Abe</title>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <title>Windows 98 Horror-Themed Website</title>
     <style>
         body {
+            background: black;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
             margin: 0;
-            font-family: 'Russo One', sans-serif;
-            background-color: black;
-            color: white;
-            text-align: center;
-            cursor: url('https://i.ibb.co/X3ft2d1/IMG-9476.png'), auto;
+            padding: 0;
         }
 
-        .blood-drip {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 30px;
-            background-image: url('https://howlingforjustice.wordpress.com/wp-content/uploads/2012/01/blood-drip-2.gif');
-            background-size: cover;
-            z-index: 1000;
-        }
-
-        .navbar {
-            background-color: black;
-            color: white;
+        .container {
+            max-width: 1200px;
+            margin: auto;
             padding: 20px;
+        }
+
+        h1 {
             text-align: center;
-            border-bottom: 2px solid white;
+            font-size: 2.5rem;
         }
 
-        .navbar a {
-            color: white;
-            font-size: 18px;
-            margin: 0 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .logo {
-            margin-top: 20px;
+        .ticker {
             position: relative;
+            overflow: hidden;
+            width: 100%;
+            background: red;
+            height: 50px;
+            margin: 20px 0;
         }
 
-        .logo img {
-            height: 150px;
+        .ticker-container {
+            display: flex;
+            position: absolute;
+            animation: tickerLoop 10s linear infinite;
+            width: max-content;
+        }
+
+        .ticker-container span {
+            font-size: 1.5rem;
+            padding: 10px;
+            white-space: nowrap;
+        }
+
+        @keyframes tickerLoop {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
         }
 
         .custom-ticker {
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 60px; /* Adjust based on ticker image height */
+            height: auto; /* Automatically adjusts based on image height */
             background-color: black;
             margin-top: 10px;
         }
@@ -64,11 +68,12 @@
             display: flex;
             position: absolute;
             animation: customTickerLoop 10s linear infinite;
-            width: 200%; /* Ensure continuous scrolling by duplicating content */
+            width: max-content; /* Ensures the container resizes based on content */
         }
 
         .custom-ticker img {
-            height: 100%; /* Keep proportions of the image */
+            height: auto; /* Maintain original image proportions */
+            width: auto; /* Prevent distortion */
         }
 
         @keyframes customTickerLoop {
@@ -76,145 +81,40 @@
                 transform: translateX(0);
             }
             to {
-                transform: translateX(-50%);
+                transform: translateX(-100%);
             }
         }
 
-        .menu {
-            display: flex;
-            justify-content: center;
+        footer {
+            text-align: center;
             margin-top: 20px;
-        }
-
-        .menu a {
-            margin: 0 15px;
-        }
-
-        .social-icons img {
-            width: 30px;
-            margin: 0 10px;
-        }
-
-        .bloody-amerika-logo img {
-            width: 250px;
-            margin-top: 5px;
-        }
-
-        .out-now {
-            margin-top: 5px;
-            font-size: 24px;
-        }
-
-        .stream-link {
-            font-size: 20px;
-            color: red;
-            text-decoration: none;
-        }
-
-        .cover-art {
-            border: 3px dotted red;
-            display: inline-block;
-            margin: 5px;
-        }
-
-        .extra-image {
-            border: 3px dotted red;
-            margin-top: 15px;
-        }
-
-        .shows {
-            margin-top: 50px;
-            border-top: 1px solid white;
-            padding-top: 50px;
-        }
-
-        .footer {
-            margin-top: 50px;
-            font-size: 14px;
-            position: relative;
-        }
-
-        .moving-banner {
-            position: absolute;
-            bottom: 40px;
-            width: 100%;
-            height: 40px;
-            background: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518') repeat-x;
-            animation: banner 10s linear infinite;
-        }
-
-        @keyframes banner {
-            from { background-position: 0 0; }
-            to { background-position: -100% 0; }
-        }
-
-        .flag {
-            margin-top: 20px;
-        }
-
-        .flag img {
-            width: 50px;
-            margin: 0 5px;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Windows 98 Horror-Themed Website</h1>
 
-    <div class="blood-drip"></div>
+        <!-- Original Ticker -->
+        <div class="ticker">
+            <div class="ticker-container">
+                <span>Welcome to the 90s Horror Web Experience!</span>
+                <span>Windows 98 vibes with a horror twist.</span>
+                <span>Links, music, and everything bloody-brains!</span>
+            </div>
+        </div>
 
-    <div class="navbar">
-        <div class="logo">
-            <img src="https://i.ibb.co/mR1vDL0/9-EA294-CD-0-A33-4-ED1-A12-B-74-AAF3297-B2-C.png" alt="Logo">
-        </div>
-        <div class="flag">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif" alt="US Flag">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif" alt="US Flag">
-        </div>
+        <!-- Custom Ticker -->
         <div class="custom-ticker">
             <div class="custom-ticker-container">
                 <img src="https://i.ibb.co/pQmQdf4/68-FCCA1-F-C7-A1-4-A4-A-B492-9-F79-CD00-B783.png" alt="Custom Ticker">
                 <img src="https://i.ibb.co/pQmQdf4/68-FCCA1-F-C7-A1-4-A4-A-B492-9-F79-CD00-B783.png" alt="Custom Ticker">
             </div>
         </div>
-        <div class="moving-banner"></div>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#music">Music</a>
-            <a href="#shows">Shows</a>
-        </div>
     </div>
 
-    <div id="music" class="social-icons">
-        <a href="https://www.instagram.com/omgsirabe/"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
-        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
-        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"></a>
-        <a href="https://youtube.com/@sogothimded?feature=shared"><img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube"></a>
-        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
-    </div>
-
-    <div class="bloody-amerika-logo">
-        <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo">
-    </div>
-
-    <div class="out-now">OUT NOW</div>
-    <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="stream-link">CLICK ME TO STREAM</a>
-
-    <div class="cover-art">
-        <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art" width="300">
-    </div>
-
-    <div class="extra-image">
-        <img src="https://i.ibb.co/Dr6X0pz/C34-FB930-DCDC-4-CF5-AA23-45-B2-F7-D7499-C.jpg" alt="Extra Image" width="300">
-    </div>
-
-    <div id="shows" class="shows">
-        <h2 style="font-size: 40px;">SHOWS COMING SOON</h2>
-    </div>
-
-    <div class="footer">
-        <p>© 2024 $IR ABE</p>
-        <div class="moving-banner"></div>
-    </div>
-
+    <footer>
+        <p>© 2024 Bloody Brains Horror. All rights reserved.</p>
+    </footer>
 </body>
 </html>
