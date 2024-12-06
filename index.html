@@ -66,7 +66,7 @@
             display: inline-block;
             white-space: nowrap;
             padding-left: 100%;
-            animation: ticker 10s linear infinite;
+            animation: ticker 4s linear infinite; /* Faster animation speed */
         }
 
         .news-ticker span::before, .news-ticker span::after {
@@ -96,11 +96,11 @@
 
         .bloody-amerika-logo img {
             width: 250px;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         .out-now {
-            margin-top: 10px;
+            margin-top: 5px;
             font-size: 24px;
         }
 
@@ -113,7 +113,7 @@
         .cover-art {
             border: 3px dotted red;
             display: inline-block;
-            margin: 10px;
+            margin: 5px;
         }
 
         .extra-image {
@@ -146,6 +146,15 @@
             from { background-position: 0 0; }
             to { background-position: -100% 0; }
         }
+
+        .flag {
+            margin-top: 20px;
+        }
+
+        .flag img {
+            width: 50px;
+            margin: 0 5px;
+        }
     </style>
 </head>
 <body>
@@ -156,9 +165,14 @@
         <div class="logo">
             <img src="https://i.ibb.co/mR1vDL0/9-EA294-CD-0-A33-4-ED1-A12-B-74-AAF3297-B2-C.png" alt="Logo">
         </div>
+        <div class="flag">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="US Flag">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="US Flag">
+        </div>
         <div class="news-ticker">
             <span>WELCOME TO HELL, WE LOVE YOU HERE</span>
         </div>
+        <div class="moving-banner"></div>
         <div class="menu">
             <a href="#">Home</a>
             <a href="#music">Music</a>
