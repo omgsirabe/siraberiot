@@ -65,152 +65,86 @@
         .news-ticker span {
             display: inline-block;
             white-space: nowrap;
-            padding-left: 100%;
-            animation: ticker 4s linear infinite; /* Faster animation speed */
-        }
-
-        .news-ticker span::before, .news-ticker span::after {
-            content: '☆';
-            margin: 0 10px;
+            animation: ticker 5s linear infinite;
         }
 
         @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
 
-        .menu {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
+        .socials {
+            margin-top: 30px;
         }
 
-        .menu a {
-            margin: 0 15px;
-        }
-
-        .social-icons img {
-            width: 30px;
+        .socials img {
+            width: 50px;
             margin: 0 10px;
         }
 
-        .bloody-amerika-logo img {
-            width: 250px;
-            margin-top: 5px;
+        .blinkie {
+            margin: 10px 0;
         }
 
-        .out-now {
-            margin-top: 5px;
-            font-size: 24px;
-        }
-
-        .stream-link {
-            font-size: 20px;
-            color: red;
-            text-decoration: none;
-        }
-
-        .cover-art {
-            border: 3px dotted red;
-            display: inline-block;
-            margin: 5px;
-        }
-
-        .extra-image {
-            border: 3px dotted red;
-            margin-top: 15px;
-        }
-
-        .shows {
-            margin-top: 50px;
-            border-top: 1px solid white;
-            padding-top: 50px;
-        }
-
-        .footer {
-            margin-top: 50px;
-            font-size: 14px;
-            position: relative;
-        }
-
-        .moving-banner {
-            position: absolute;
-            bottom: 40px;
-            width: 100%;
-            height: 40px;
-            background: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518') repeat-x;
-            animation: banner 10s linear infinite;
-        }
-
-        @keyframes banner {
-            from { background-position: 0 0; }
-            to { background-position: -100% 0; }
+        .blinkie img {
+            width: 150px;
         }
 
         .flag {
-            margin-top: 20px;
+            margin: 10px;
         }
 
         .flag img {
             width: 50px;
-            margin: 0 5px;
+        }
+
+        .bloody-amerika {
+            margin-top: 10px;
+        }
+
+        .bloody-amerika img {
+            width: 300px;
         }
     </style>
 </head>
 <body>
-
     <div class="blood-drip"></div>
 
     <div class="navbar">
-        <div class="logo">
-            <img src="https://i.ibb.co/mR1vDL0/9-EA294-CD-0-A33-4-ED1-A12-B-74-AAF3297-B2-C.png" alt="Logo">
-        </div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="logo">
         <div class="flag">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="US Flag">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="US Flag">
-        </div>
-        <div class="news-ticker">
-            <span>WELCOME TO HELL, WE LOVE YOU HERE</span>
-        </div>
-        <div class="moving-banner"></div>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#music">Music</a>
-            <a href="#shows">Shows</a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif" alt="USA Flag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif" alt="USA Flag">
         </div>
     </div>
 
-    <div id="music" class="social-icons">
-        <a href="https://www.instagram.com/omgsirabe/"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
-        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
-        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"></a>
-        <a href="https://youtube.com/@sogothimded?feature=shared"><img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube"></a>
-        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
+    <div class="news-ticker">
+        <span>Breaking News: Bloody Amerika Is Here To Stay!</span>
     </div>
 
-    <div class="bloody-amerika-logo">
-        <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo">
+    <div class="socials">
+        <a href="#"><img src="https://i.ibb.co/FwT9nLt/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="https://i.ibb.co/K6sDjFw/spotify.png" alt="Spotify"></a>
+        <a href="#"><img src="https://i.ibb.co/NFh0p4t/apple-music.png" alt="Apple Music"></a>
+        <a href="#"><img src="https://i.ibb.co/8g91bDt/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="https://i.ibb.co/zSvpS6b/soundcloud.png" alt="SoundCloud"></a>
     </div>
 
-    <div class="out-now">OUT NOW</div>
-    <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="stream-link">CLICK ME TO STREAM</a>
-
-    <div class="cover-art">
-        <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Cover Art" width="300">
+    <div class="blinkie">
+        <img src="https://i.ibb.co/yP2ZLpD/blinkie-example.gif" alt="Blinkie">
     </div>
 
-    <div class="extra-image">
-        <img src="https://i.ibb.co/Dr6X0pz/C34-FB930-DCDC-4-CF5-AA23-45-B2-F7-D7499-C.jpg" alt="Extra Image" width="300">
+    <div class="bloody-amerika">
+        <img src="https://i.ibb.co/zbQNkk5/bloody-amerika-logo.png" alt="Bloody Amerika Logo">
     </div>
-
-    <div id="shows" class="shows">
-        <h2 style="font-size: 40px;">SHOWS COMING SOON</h2>
-    </div>
-
-    <div class="footer">
-        <p>© 2024 $IR ABE</p>
-        <div class="moving-banner"></div>
-    </div>
-
 </body>
 </html>
