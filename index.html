@@ -66,7 +66,13 @@
         }
 
         .custom-ticker span {
-            display: inline;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .custom-ticker .pentagram {
+            margin: 0 10px;
         }
 
         .custom-ticker .hell {
@@ -154,12 +160,11 @@
             margin: 0 5px;
         }
 
-        .ticker-fixed {
+        .ticker {
             width: 100%;
             height: 40px;
             background: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518') repeat-x;
             animation: banner 10s linear infinite;
-            position: relative;
         }
     </style>
 </head>
@@ -176,7 +181,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif" alt="US Flag">
         </div>
         <div class="custom-ticker">
-            <span>WELCOME TO <span class="hell">HELL</span>, WE LOVE YOU HERE!</span>
+            <span>★ WELCOME TO <span class="hell">HELL</span>, WE LOVE YOU HERE! ★</span>
         </div>
     </div>
 
@@ -192,7 +197,7 @@
         <img src="https://i.ibb.co/9W4T126/456542-C7-ED09-47-D7-88-DF-E6-C977370159.png" alt="Bloody Amerika Logo">
     </div>
 
-    <div class="ticker-fixed"></div>
+    <div class="ticker" style="margin-top: 5px;"></div>
 
     <div class="out-now">OUT NOW</div>
     <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="stream-link">CLICK ME TO STREAM</a>
@@ -209,7 +214,7 @@
         <h2 style="font-size: 40px;">SHOWS COMING SOON</h2>
     </div>
 
-    <div class="ticker-fixed"></div>
+    <div class="ticker" style="margin-top: 5px;"></div>
 
     <div class="footer">
         <p>© 2024 $IR ABE</p>
