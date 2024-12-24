@@ -113,7 +113,7 @@
 
         .stream-link {
             font-size: 20px;
-            color: red;
+            color: red; /* Updated text color to red */
             text-decoration: none;
         }
 
@@ -154,11 +154,15 @@
             height: 40px;
             background: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518') repeat-x;
             animation: banner 10s linear infinite;
-            position: relative;
+            position: fixed;
+            top: 0; /* Re-added the ticker to the top */
+            z-index: 1001;
         }
     </style>
 </head>
 <body>
+
+    <div class="ticker-fixed"></div> <!-- Re-added ticker at the top -->
 
     <div class="blood-drip"></div>
 
@@ -204,8 +208,6 @@
     <div id="shows" class="shows">
         <h2 style="font-size: 40px;">SHOWS COMING SOON</h2>
     </div>
-
-    <div class="ticker-fixed"></div>
 
     <div class="footer">
         <p>© 2024 $IR ABE</p>
