@@ -83,10 +83,9 @@
         .menu {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            background-color: black;
+            gap: 30px;
             padding: 15px 0;
-            border-top: 2px solid white;
+            background-color: black;
             border-bottom: 2px solid white;
         }
 
@@ -94,7 +93,6 @@
             color: white;
             font-size: 18px;
             font-weight: bold;
-            margin: 10px 20px;
             text-decoration: underline;
             text-transform: uppercase;
             cursor: pointer;
@@ -127,7 +125,7 @@
             margin-top: 15px;
         }
 
-        .shows, .store, .about, .privacy-policy {
+        .section {
             display: none;
             background-color: black;
             color: white;
@@ -160,7 +158,7 @@
     </style>
     <script>
         function showSection(section) {
-            document.querySelectorAll('.shows, .store, .about, .privacy-policy').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
             document.querySelector('.' + section).style.display = 'block';
             window.scrollTo(0, document.querySelector('.' + section).offsetTop);
         }
@@ -206,6 +204,11 @@
     <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="cover-art">
         <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Bloody Amerika Cover Art" width="300">
     </a>
+
+    <div class="section shows">SHOW ANNOUNCEMENTS COMING SOON</div>
+    <div class="section store">STORE COMING SOON</div>
+    <div class="section about">ABOUT SECTION COMING SOON</div>
+    <div class="section privacy-policy">PRIVACY POLICY COMING SOON</div>
 
     <div class="footer">
         <p>© 2025 $IR ABE</p>
