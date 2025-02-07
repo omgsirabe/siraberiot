@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Russo One', sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid white;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 18px;
+            margin: 0 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .content {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="shows.html">Shows</a>
+        <a href="store.html">Store</a>
+        <a href="about.html">About</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+
+    <div class="content">
+        <h1>Privacy Policy</h1>
+        <p>This is where our privacy policy will go. Stay tuned!</p>
+    </div>
+</body>
+</html>
