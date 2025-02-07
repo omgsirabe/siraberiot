@@ -18,11 +18,9 @@
         .navbar {
             background-color: black;
             color: white;
-            padding: 15px 0;
+            padding: 20px;
             text-align: center;
             border-bottom: 2px solid white;
-            display: flex;
-            justify-content: center;
         }
 
         .navbar a {
@@ -33,8 +31,9 @@
             text-transform: uppercase;
         }
 
-        .navbar a:hover {
-            color: #39FF14;
+        .logo {
+            margin-top: 20px;
+            position: relative;
         }
 
         .logo img {
@@ -42,6 +41,8 @@
         }
 
         .custom-ticker {
+            position: relative;
+            overflow: hidden;
             width: 100%;
             height: 60px;
             background-color: #39FF14;
@@ -51,6 +52,20 @@
             font-size: 20px;
             font-weight: bold;
             color: black;
+        }
+
+        .custom-ticker span {
+            display: inline;
+        }
+
+        .custom-ticker .hell {
+            animation: blinkFast 0.3s step-end infinite;
+        }
+
+        @keyframes blinkFast {
+            50% {
+                visibility: hidden;
+            }
         }
 
         .moving-banner {
@@ -63,6 +78,16 @@
         @keyframes banner {
             from { background-position: 0 0; }
             to { background-position: -100% 0; }
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .menu a {
+            margin: 0 15px;
         }
 
         .social-icons img {
@@ -87,68 +112,73 @@
             margin: 5px;
         }
 
+        .extra-image {
+            border: 3px dotted #39FF14;
+            margin-top: 15px;
+        }
+
+        .shows {
+            margin-top: 50px;
+            border-top: 1px solid white;
+            padding-top: 50px;
+        }
+
         .footer {
             margin-top: 50px;
             font-size: 14px;
+            position: relative;
         }
 
-        .footer a {
-            color: white;
-            text-transform: uppercase;
-            text-decoration: none;
-            display: block;
-            margin-top: 10px;
+        .flag {
+            margin-top: 20px;
         }
 
-        .footer a:hover {
-            color: #39FF14;
+        .flag img {
+            width: 50px;
+            margin: 0 5px;
+        }
+
+        .ticker-fixed {
+            width: 100%;
+            height: 40px;
+            background: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518') repeat-x;
+            animation: banner 10s linear infinite;
         }
 
         .black-screen {
             background-color: black;
-            color: #39FF14;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
-            text-transform: uppercase;
-        }
-
-        .privacy-container, .terms-container {
-            padding: 40px;
-            text-align: left;
-            max-width: 800px;
-            margin: auto;
             color: white;
-        }
-
-        .privacy-container h1, .terms-container h1 {
             text-align: center;
+            padding-top: 20%;
+            height: 100vh;
         }
 
-        .privacy-container p, .terms-container p {
-            font-size: 14px;
-            line-height: 1.6;
+        .privacy-policy, .terms-conditions {
+            font-size: 12px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="store.html">Store</a>
-        <a href="shows.html">Shows</a>
-        <a href="about.html">About</a>
+        <div class="logo">
+            <img src="https://i.ibb.co/QjXLYVWh/IMG-4423.png" alt="Logo">
+        </div>
+        <div class="flag">
+            <img src="https://media.tenor.com/A5Hi9Uemg44AAAAi/skull-laugh.gif" alt="Skull GIF">
+        </div>
+        <div class="custom-ticker">
+            <span>WELCOME TO <span class="hell">HELL</span>, WE LOVE YOU HERE!</span>
+        </div>
+        <div class="ticker-fixed"></div>
     </div>
 
-    <div class="logo">
-        <img src="https://i.ibb.co/QjXLYVWh/IMG-4423.png" alt="Logo">
-    </div>
-
-    <div class="custom-ticker">
-        <span>WELCOME TO HELL, WE LOVE YOU HERE!</span>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="javascript:void(0);" onclick="window.location.href='shows.html';">Shows</a>
+        <a href="javascript:void(0);" onclick="window.location.href='store.html';">Store</a>
+        <a href="javascript:void(0);" onclick="window.location.href='about.html';">About</a>
     </div>
 
     <div id="music" class="social-icons">
@@ -166,18 +196,41 @@
 
     <div class="out-now">BLOODY AMERIKA OUT NOW</div>
     <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="stream-link">CLICK ME TO STREAM</a>
-
     <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="cover-art">
         <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Bloody Amerika Cover Art" width="300">
     </a>
+
+    <div class="extra-image">
+        <img src="https://i.ibb.co/7wPtTrz/A2394606-AA35-48-B4-B7-FA-C462834-F3-BA8.jpg" alt="Extra Image" width="300">
+    </div>
 
     <div class="moving-banner"></div>
 
     <div class="footer">
         <p>© 2025 $IR ABE</p>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms and Conditions</a>
+        <a href="javascript:void(0);" onclick="window.location.href='privacy-policy.html';" class="privacy-policy">PRIVACY POLICY</a>
     </div>
 
-</body>
-</html>
+    <!-- Shows Page -->
+    <div id="shows" class="black-screen" style="display: none;">
+        <h2>SHOW ANNOUNCEMENTS COMING SOON</h2>
+    </div>
+
+    <!-- Store Page -->
+    <div id="store" class="black-screen" style="display: none;">
+        <div class="logo">
+            <img src="https://i.ibb.co/QjXLYVWh/IMG-4423.png" alt="Logo">
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="black-screen" style="display: none;">
+        <div class="logo">
+            <img src="https://i.ibb.co/QjXLYVWh/IMG-4423.png" alt="Logo">
+        </div>
+    </div>
+
+    <!-- Privacy Policy Page -->
+    <div id="privacy-policy" class="black-screen" style="display: none;">
+        <div class="logo">
+            <img
