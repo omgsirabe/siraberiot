@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 $ir Abe</title>
+    <title>$ir Abe</title>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <style>
         body {
@@ -22,6 +22,12 @@
             width: 100%;
             height: auto;
             z-index: 1000;
+        }
+
+        .blood-drip img {
+            width: 100%;
+            height: auto;
+            filter: brightness(1.5) saturate(2);
         }
 
         .navbar {
@@ -54,7 +60,7 @@
             overflow: hidden;
             width: 100%;
             height: 60px;
-            background-color: lime;
+            background-color: limegreen;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -111,18 +117,18 @@
 
         .stream-link {
             font-size: 20px;
-            color: lime;
+            color: limegreen;
             text-decoration: none;
         }
 
         .cover-art {
-            border: 3px dotted lime;
+            border: 3px dotted limegreen;
             display: inline-block;
             margin: 5px;
         }
 
         .extra-image {
-            border: 3px dotted lime;
+            border: 3px dotted limegreen;
             margin-top: 15px;
         }
 
@@ -138,15 +144,6 @@
             position: relative;
         }
 
-        .flag {
-            margin-top: 20px;
-        }
-
-        .flag img {
-            width: 50px;
-            margin: 0 5px;
-        }
-
         .ticker-fixed {
             width: 100%;
             height: 40px;
@@ -158,7 +155,7 @@
 <body>
 
     <div class="blood-drip">
-        <img src="https://runex.io/forums/uploads/monthly_2019_02/1448469792-Young_Animation_imagination112515_01.gif.2b7622fa4e241e29c42b9f62c42fd689.gif" alt="Blood Drip" width="100%" style="filter: brightness(1.5) saturate(2);">
+        <img src="https://runex.io/forums/uploads/monthly_2019_02/1448469792-Young_Animation_imagination112515_01.gif.2b7622fa4e241e29c42b9f62c42fd689.gif" alt="Blood Drip">
     </div>
 
     <div class="navbar">
@@ -200,7 +197,7 @@
         <img src="https://i.ibb.co/7wPtTrz/A2394606-AA35-48-B4-B7-FA-C462834-F3-BA8.jpg" alt="Extra Image" width="300">
     </div>
 
-    <div class="moving-banner"></div> <!-- Added moving ticker -->
+    <div class="moving-banner"></div>
 
     <div id="shows" class="shows">
         <h2 style="font-size: 40px;">SHOWS COMING SOON</h2>
