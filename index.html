@@ -21,10 +21,7 @@
             padding: 20px;
             text-align: center;
             border-bottom: 2px solid white;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 10;
+            position: relative;
         }
 
         .navbar a {
@@ -33,7 +30,6 @@
             margin: 0 20px;
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
         }
 
         .logo {
@@ -89,10 +85,39 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            position: relative;
         }
 
         .menu a {
             margin: 0 15px;
+        }
+
+        .menu-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-item:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #39FF14;
         }
 
         .social-icons img {
@@ -180,10 +205,32 @@
     </div>
 
     <div class="menu">
-        <a href="#">HOME</a>
-        <a href="javascript:void(0);" onclick="window.location.href='shows.html';">SHOWS</a>
-        <a href="javascript:void(0);" onclick="window.location.href='store.html';">STORE</a>
-        <a href="javascript:void(0);" onclick="window.location.href='about.html';">ABOUT</a>
+        <div class="menu-item">
+            <a href="#">Home</a>
+        </div>
+        <div class="menu-item">
+            <a href="javascript:void(0);">Shows</a>
+            <div class="dropdown">
+                <a href="shows.html">Show 1</a>
+                <a href="shows.html">Show 2</a>
+                <a href="shows.html">Show 3</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="javascript:void(0);">Store</a>
+            <div class="dropdown">
+                <a href="store.html">Item 1</a>
+                <a href="store.html">Item 2</a>
+                <a href="store.html">Item 3</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="javascript:void(0);">About</a>
+            <div class="dropdown">
+                <a href="about.html">About Us</a>
+                <a href="about.html">Contact</a>
+            </div>
+        </div>
     </div>
 
     <div id="music" class="social-icons">
