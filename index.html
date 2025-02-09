@@ -163,17 +163,38 @@
             animation: banner 10s linear infinite;
         }
 
-        .dead-alive-collection, .rok-out-section {
-            text-align: center;
+        .collection-banner {
+            font-size: 24px;
+            color: white;
             margin-top: 50px;
         }
 
-        .dead-alive-collection h2, .rok-out-section h2 {
-            font-size: 24px;
+        .collection-banner .available-now {
+            color: #39FF14;
         }
 
-        .dead-alive-collection .green-text, .rok-out-section .green-text {
+        .rok-out-section {
+            font-size: 18px;
+            margin-top: 50px;
+        }
+
+        .rok-out-cover {
+            border: 3px dotted #39FF14;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .rok-out-cover img {
+            width: 250px;
+        }
+
+        .stream-link-rok-out {
+            font-size: 20px;
             color: #39FF14;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
         }
     </style>
     <script>
@@ -214,23 +235,28 @@
         <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
     </div>
 
-    <div class="dead-alive-collection">
-        <h2><span style="color: white;">SIR ABE DEAD ALIVE COLLECTION</span> <span class="green-text">AVAILABLE NOW</span></h2>
-        <iframe src="https://sir-abe-store.printify.me/products"></iframe>
-    </div>
-
-    <div class="rok-out-section">
-        <h2><span style="color: white;">ROK OUT 3 PACK OUT NOW</span></h2>
-        <a href="https://distrokid.com/hyperfollow/irabe/rok-out-4">
-            <img src="https://images.genius.com/a4b18cfceec91c89f08d9c5fac220f42.599x599x1.jpg" alt="ROK OUT Cover Art" class="cover-art">
-        </a>
-        <p><a href="https://distrokid.com/hyperfollow/irabe/rok-out-4" class="green-text">CLICK ME TO STREAM</a></p>
+    <div class="collection-banner">
+        <span style="color: white;">SIR ABE DEAD ALIVE COLLECTION</span> <span class="available-now">AVAILABLE NOW</span>
     </div>
 
     <div class="section shows">SHOW ANNOUNCEMENTS COMING SOON</div>
 
     <div class="section store">
         <iframe src="https://sir-abe-store.printify.me/products"></iframe>
+    </div>
+
+    <div class="rok-out-section">
+        <div class="rok-out-cover">
+            <a href="https://distrokid.com/hyperfollow/irabe/rok-out-4" target="_blank">
+                <img src="https://images.genius.com/a4b18cfceec91c89f08d9c5fac220f42.599x599x1.jpg" alt="Rok Out Cover Art">
+            </a>
+        </div>
+        <div>
+            <span style="color: white;">ROK OUT 3 PACK OUT NOW</span>
+        </div>
+        <div>
+            <a href="https://distrokid.com/hyperfollow/irabe/rok-out-4" class="stream-link-rok-out" target="_blank">CLICK ME TO STREAM</a>
+        </div>
     </div>
 
     <div class="section about">ABOUT SECTION COMING SOON</div>
