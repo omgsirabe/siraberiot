@@ -134,14 +134,6 @@
             height: 100vh;
         }
 
-        .privacy-policy {
-            display: none;
-            text-align: left;
-            padding: 50px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-
         .footer {
             margin-top: 50px;
             font-size: 14px;
@@ -167,13 +159,7 @@
     <script>
         function showSection(section) {
             document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.privacy-policy').forEach(el => el.style.display = 'none');
-
-            if (section === 'privacy-policy') {
-                document.querySelector('.privacy-policy').style.display = 'block';
-            } else {
-                document.querySelector('.' + section).style.display = 'block';
-            }
+            document.querySelector('.' + section).style.display = 'block';
             window.scrollTo(0, document.querySelector('.' + section).offsetTop);
         }
     </script>
@@ -209,24 +195,25 @@
     </div>
 
     <div class="out-now">GEEK BAR OUT NOW! <a href="https://distrokid.com/hyperfollow/irabe/geek-bar-feat-envy" class="stream-link">CLICK ME TO STREAM</a></div>
-    
+    <a href="https://distrokid.com/hyperfollow/irabe/geek-bar-feat-envy" class="cover-art">
+        <img src="https://i.ibb.co/C9DBHTY/C795401-F-D201-4-C4-B-8-E7-D-F6-C7-F406-BEC9.jpg" alt="Geek Bar Cover Art" width="300">
+    </a>
+
+    <div class="out-now">BLOODY AMERIKA OUT NOW</div>
+    <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="stream-link">CLICK ME TO STREAM</a>
+    <a href="https://distrokid.com/hyperfollow/irabe/bloody-amerika-2" class="cover-art">
+        <img src="https://i.ibb.co/hYcB9X4/6-BFFF9-C8-4291-4-A06-8-F4-B-F07-E199-CCF05.jpg" alt="Bloody Amerika Cover Art" width="300">
+    </a>
+
     <div class="section shows">SHOW ANNOUNCEMENTS COMING SOON</div>
     <div class="section store">STORE COMING SOON</div>
     <div class="section about">ABOUT SECTION COMING SOON</div>
 
-    <div class="privacy-policy">
+    <div class="section privacy-policy">
         <h2>Privacy Policy</h2>
-        <p><strong>Effective Date: February 8th, 2025</strong></p>
+        <p>Effective Date: February 8th, 2025</p>
         <p>Welcome to $ir Abe! Your privacy is important to us...</p>
-        <p><strong>1. Information We Collect</strong></p>
-        <p>We may collect personal information such as name, email, and payment details...</p>
-        <p><strong>2. How We Use Your Information</strong></p>
-        <p>We use collected information to process orders, improve user experience...</p>
-        <p><strong>3. Sharing Your Information</strong></p>
-        <p>We do not sell personal data, but may share it with service providers...</p>
-        <p><strong>4. Contact Us</strong></p>
-        <p>Email: bloodyamerika@gmail.com</p>
-        <p>Website: <a href="https://sogothimdead.com">https://sogothimdead.com</a></p>
+        <!-- Insert full privacy policy text here -->
     </div>
 
     <div class="footer">
