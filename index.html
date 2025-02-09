@@ -182,9 +182,14 @@
             display: inline-block;
             border: 3px dotted #39FF14;
             margin-top: 10px;
-            width: 100%;
-            max-width: 1000px;
-            height: auto;
+            width: 100%; /* Adjusted to fit the page */
+            max-width: 500px; /* Ensures it doesn't get too large on larger screens */
+        }
+
+        @media (max-width: 768px) {
+            .rok-out-cover {
+                width: 90%; /* Makes it fit better on mobile devices */
+            }
         }
     </style>
     <script>
