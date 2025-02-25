@@ -182,21 +182,44 @@
             display: inline-block;
             border: 3px dotted #39FF14;
             margin-top: 10px;
-            width: 100%; /* Adjusted to fit the page */
-            max-width: 500px; /* Ensures it doesn't get too large on larger screens */
+            width: 100%;
+            max-width: 500px;
         }
 
         .girl-interrupted-cover {
-            border: 3px dotted #39FF14; /* Added green dotted border */
+            border: 3px dotted #39FF14;
+        }
+
+        .loser-section {
+            margin-top: 30px;
+        }
+
+        .loser-text {
+            font-size: 24px;
+            color: #39FF14;
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .loser-gif {
+            width: 100%;
+            max-width: 400px;
+            border: 3px dotted #39FF14;
+            cursor: pointer;
         }
 
         @media (max-width: 768px) {
             .rok-out-cover {
-                width: 90%; /* Makes it fit better on mobile devices */
+                width: 90%;
             }
             .girl-interrupted-cover {
-                width: 100%; /* Adjusted for mobile view */
-                max-width: 400px; /* Ensures it's appropriately sized on mobile */
+                width: 100%;
+                max-width: 400px;
+            }
+            .loser-gif {
+                width: 100%;
+                max-width: 350px;
             }
         }
     </style>
@@ -230,12 +253,11 @@
         <a onclick="showSection('privacy-policy')">PRIVACY POLICY</a>
     </div>
 
-    <div id="music" class="social-icons">
-        <a href="https://www.instagram.com/omgsirabe"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
-        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
-        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"></a>
-        <a href="https://youtube.com/@sogothimded?feature=shared"><img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube"></a>
-        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
+    <div class="loser-section">
+        <p class="loser-text" onclick="window.location.href='https://distrokid.com/hyperfollow/saint72/loser'">PRE-SAVE LOSER NOW!</p>
+        <a href="https://distrokid.com/hyperfollow/saint72/loser">
+            <img src="https://gcdnb.pbrd.co/images/QvW41ulaxlUw.gif?o=1" alt="Loser GIF" class="loser-gif">
+        </a>
     </div>
 
     <div class="girl-interrupted">
@@ -244,25 +266,6 @@
         <a href="https://distrokid.com/hyperfollow/irabe/girl-interrupted">
             <img src="https://s3.amazonaws.com/gather.fandalism.com/3000x3000%2D3263302%2D%2D701BBB96%2D1BEB%2D42AA%2D86AA6BA4B3E6E72F%2D%2D0%2D%2D979306%2D%2D89E1CEAAC77345A896554F7AA6CF9017%2Ejpg" alt="girl interrupted Cover" class="girl-interrupted-cover">
         </a>
-    </div>
-
-    <div class="dead-alive-collection">
-        <p>SIR ABE DEAD ALIVE COLLECTION AVAILABLE NOW</p>
-        <div class="green-border">
-            <iframe src="https://sir-abe-store.printify.me" height="400" width="100%"></iframe>
-        </div>
-    </div>
-
-    <div class="section shows">SHOW ANNOUNCEMENTS COMING SOON</div>
-
-    <div class="section store">
-        <iframe src="https://sir-abe-store.printify.me/products"></iframe>
-    </div>
-
-    <div class="section about">ABOUT SECTION COMING SOON</div>
-
-    <div class="section privacy-policy">
-        <img src="https://i.ibb.co/ycJBTHQ2/IMG-4806.jpg" alt="Privacy Policy" width="80%">
     </div>
 
     <div class="footer">
