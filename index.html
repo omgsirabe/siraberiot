@@ -182,46 +182,42 @@
             display: inline-block;
             border: 3px dotted #39FF14;
             margin-top: 10px;
-            width: 100%;
-            max-width: 500px;
+            width: 100%; /* Adjusted to fit the page */
+            max-width: 500px; /* Ensures it doesn't get too large on larger screens */
         }
 
         .girl-interrupted-cover {
-            border: 3px dotted #39FF14;
+            border: 3px dotted #39FF14; /* Added green dotted border */
+        }
+
+        .loser-gif {
+            width: 100%;
+            height: auto;
         }
 
         .loser-section {
-            margin-top: 30px;
+            text-align: center;
+            padding: 50px 20px;
         }
 
         .loser-text {
             font-size: 24px;
             color: #39FF14;
-            margin-bottom: 10px;
-        }
-
-        .loser-text a {
-            text-decoration: none;
-            color: #39FF14;
-        }
-
-        .loser-gif {
-            width: 100%;
-            max-width: 500px;
-            border: 3px dotted #39FF14;
+            cursor: pointer;
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
             .rok-out-cover {
-                width: 90%;
+                width: 90%; /* Makes it fit better on mobile devices */
             }
             .girl-interrupted-cover {
-                width: 100%;
-                max-width: 400px;
+                width: 100%; /* Adjusted for mobile view */
+                max-width: 400px; /* Ensures it's appropriately sized on mobile */
             }
             .loser-gif {
                 width: 100%;
-                max-width: 90%;
+                height: auto;
             }
         }
     </style>
@@ -255,10 +251,18 @@
         <a onclick="showSection('privacy-policy')">PRIVACY POLICY</a>
     </div>
 
+    <div id="music" class="social-icons">
+        <a href="https://www.instagram.com/omgsirabe"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
+        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
+        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"></a>
+        <a href="https://youtube.com/@sogothimded?feature=shared"><img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube"></a>
+        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
+    </div>
+
     <div class="loser-section">
-        <p class="loser-text"><a href="https://distrokid.com/hyperfollow/saint72/loser">PRE-SAVE LOSER NOW!</a></p>
         <a href="https://distrokid.com/hyperfollow/saint72/loser">
-            <img src="https://gcdnb.pbrd.co/images/QvW41ulaxlUw.gif?o=1" alt="Loser GIF" class="loser-gif">
+            <img src="https://gcdnb.pbrd.co/images/QvW41ulaxlUw.gif?o=1" alt="Loser Gif" class="loser-gif">
+            <p class="loser-text">PRE-SAVE LOSER NOW!</p>
         </a>
     </div>
 
@@ -275,6 +279,22 @@
         <div class="green-border">
             <iframe src="https://sir-abe-store.printify.me" height="400" width="100%"></iframe>
         </div>
+    </div>
+
+    <div class="section shows">SHOW ANNOUNCEMENTS COMING SOON</div>
+
+    <div class="section store">
+        <iframe src="https://sir-abe-store.printify.me/products"></iframe>
+    </div>
+
+    <div class="section about">ABOUT SECTION COMING SOON</div>
+
+    <div class="section privacy-policy">
+        <img src="https://i.ibb.co/ycJBTHQ2/IMG-4806.jpg" alt="Privacy Policy" width="80%">
+    </div>
+
+    <div class="footer">
+        <p>© 2025 $IR ABE</p>
     </div>
 
 </body>
