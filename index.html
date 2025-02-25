@@ -98,9 +98,17 @@
             cursor: pointer;
         }
 
-        .social-icons img {
-            width: 30px;
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
             margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 40px;
         }
 
         .out-now {
@@ -166,28 +174,10 @@
             border: 3px solid #39FF14;
         }
 
-        .dead-alive-collection,
-        .rok-out {
+        .dead-alive-collection {
             font-size: 24px;
             color: white;
             margin-top: 20px;
-        }
-
-        .rok-out-link {
-            color: #39FF14;
-            text-decoration: none;
-        }
-
-        .rok-out-cover {
-            display: inline-block;
-            border: 3px dotted #39FF14;
-            margin-top: 10px;
-            width: 100%; /* Adjusted to fit the page */
-            max-width: 500px; /* Ensures it doesn't get too large on larger screens */
-        }
-
-        .girl-interrupted-cover {
-            border: 3px dotted #39FF14; /* Added green dotted border */
         }
 
         .loser-section img {
@@ -206,13 +196,6 @@
         }
 
         @media (max-width: 768px) {
-            .rok-out-cover {
-                width: 90%;
-            }
-            .girl-interrupted-cover {
-                width: 100%;
-                max-width: 400px;
-            }
             .loser-section img {
                 width: 90%;
             }
@@ -248,6 +231,18 @@
         <a onclick="showSection('privacy-policy')">PRIVACY POLICY</a>
     </div>
 
+    <div class="social-icons">
+        <a href="https://instagram.com">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com">
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+        </a>
+        <a href="https://youtube.com">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_social_white_squircle_%282017%29.svg" alt="YouTube">
+        </a>
+    </div>
+
     <div class="loser-section">
         <a href="https://distrokid.com/hyperfollow/saint72/loser">
             <img src="https://gcdnb.pbrd.co/images/QvW41ulaxlUw.gif?o=1" alt="Loser GIF">
@@ -255,13 +250,6 @@
         <p class="loser-text">
             <a href="https://distrokid.com/hyperfollow/saint72/loser" style="color: #39FF14; text-decoration: none;">PRE-SAVE LOSER NOW!</a>
         </p>
-    </div>
-
-    <div class="girl-interrupted">
-        <p>GIRL, INTERRUPTED OUT NOW</p>
-        <a href="https://distrokid.com/hyperfollow/irabe/girl-interrupted">
-            <img src="https://s3.amazonaws.com/gather.fandalism.com/3000x3000%2D3263302%2D%2D701BBB96%2D1BEB%2D42AA%2D86AA6BA4B3E6E72F%2D%2D0%2D%2D979306%2D%2D89E1CEAAC77345A896554F7AA6CF9017%2Ejpg" alt="girl interrupted Cover" class="girl-interrupted-cover">
-        </a>
     </div>
 
     <div class="dead-alive-collection">
