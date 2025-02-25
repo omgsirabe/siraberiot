@@ -182,28 +182,27 @@
             display: inline-block;
             border: 3px dotted #39FF14;
             margin-top: 10px;
-            width: 100%;
-            max-width: 500px;
+            width: 100%; /* Adjusted to fit the page */
+            max-width: 500px; /* Ensures it doesn't get too large on larger screens */
         }
 
         .girl-interrupted-cover {
-            border: 3px dotted #39FF14;
+            border: 3px dotted #39FF14; /* Added green dotted border */
         }
 
-        .loser-section {
-            margin-top: 20px;
+        .loser-section img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: auto;
+            border: 3px solid #39FF14;
         }
 
         .loser-text {
             font-size: 24px;
             color: #39FF14;
             margin-top: 10px;
-        }
-
-        .loser-gif {
-            width: 100%;
-            max-width: 500px;
-            border: 3px dotted #39FF14;
+            cursor: pointer;
         }
 
         @media (max-width: 768px) {
@@ -214,9 +213,8 @@
                 width: 100%;
                 max-width: 400px;
             }
-            .loser-gif {
-                width: 100%;
-                max-width: 400px;
+            .loser-section img {
+                width: 90%;
             }
         }
     </style>
@@ -251,18 +249,24 @@
     </div>
 
     <div class="loser-section">
-        <p class="loser-text"><a href="https://distrokid.com/hyperfollow/saint72/loser" style="color: #39FF14; text-decoration: none;">PRE-SAVE LOSER NOW!</a></p>
         <a href="https://distrokid.com/hyperfollow/saint72/loser">
-            <img src="https://gcdnb.pbrd.co/images/QvW41ulaxlUw.gif?o=1" alt="Loser GIF" class="loser-gif">
+            <img src="https://gcdnb.pbrd.co/images/QvW41ulaxlUw.gif?o=1" alt="Loser GIF">
         </a>
+        <p class="loser-text">
+            <a href="https://distrokid.com/hyperfollow/saint72/loser" style="color: #39FF14; text-decoration: none;">PRE-SAVE LOSER NOW!</a>
+        </p>
     </div>
 
     <div class="girl-interrupted">
         <p>GIRL, INTERRUPTED OUT NOW</p>
-        <p><a href="https://distrokid.com/hyperfollow/irabe/girl-interrupted" class="girl-interrupted-link" style="color: #39FF14;">CLICK ME TO STREAM</a></p>
         <a href="https://distrokid.com/hyperfollow/irabe/girl-interrupted">
             <img src="https://s3.amazonaws.com/gather.fandalism.com/3000x3000%2D3263302%2D%2D701BBB96%2D1BEB%2D42AA%2D86AA6BA4B3E6E72F%2D%2D0%2D%2D979306%2D%2D89E1CEAAC77345A896554F7AA6CF9017%2Ejpg" alt="girl interrupted Cover" class="girl-interrupted-cover">
         </a>
+    </div>
+
+    <div class="dead-alive-collection">
+        <p>SIR ABE DEAD ALIVE COLLECTION AVAILABLE NOW</p>
+        <iframe src="https://sir-abe-store.printify.me" height="400" width="100%" class="green-border"></iframe>
     </div>
 
     <div class="footer">
