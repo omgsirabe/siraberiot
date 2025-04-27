@@ -88,26 +88,24 @@
       text-align: center;
       margin-top: 20px;
     }
-    .calendar-icon {
-      width: 40px;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
     /* Store */
     .store-container {
       width: 90%;
       max-width: 800px;
       margin: 20px auto;
       border: 5px solid black;
-      padding: 20px;
+      padding: 0;
       box-sizing: border-box;
+      position: relative;
+      padding-top: 100%; /* Makes it a perfect square */
     }
     .store-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 800px;
+      height: 100%;
       border: none;
-      aspect-ratio: 1 / 1;
-      max-height: 800px;
     }
     /* Footer */
     footer {
@@ -128,11 +126,6 @@
       .socials a {
         font-size: 18px;
       }
-      .store-container iframe {
-        height: 90vw;
-        max-height: none;
-        aspect-ratio: 1 / 1;
-      }
     }
     html {
       scroll-behavior: smooth;
@@ -143,7 +136,7 @@
 
   <!-- Logo -->
   <div class="logo">
-    <img src="https://i.ibb.co/JjL9H8W/36-DC6-A57-C88-B-41-CA-94-BB-481-DF2-A6026-A.png" alt="Sir Abe Logo">
+    <img src="https://i.ibb.co/JjL9H8Wj/36-DC6-A57-C88-B-41-CA-94-BB-481-DF2-A6026-A.png" alt="Sir Abe Logo">
   </div>
 
   <!-- Ticker -->
@@ -177,7 +170,6 @@
   <section id="shows">
     <h2>SHOWS / EVENTS</h2>
     <div class="event">
-      <img class="calendar-icon" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Calendar_font_awesome.svg" alt="Calendar">
       <p><strong>May 18, 2025</strong></p>
       <img src="https://i.ibb.co/670YKC1w/B28-C7-AA3-21-C4-4115-BA91-53-B0-F3927904.jpg" alt="Event Flyer" style="width:80%; max-width:600px; margin-top:20px;">
     </div>
