@@ -1,240 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$ir Abe</title>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Russo One', sans-serif;
-            background-color: black;
-            color: white;
-            text-align: center;
-            cursor: url('https://i.ibb.co/X3ft2d1/IMG-9476.png'), auto;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$ir Abe Official Site</title>
 
-        .navbar {
-            background-color: black;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid white;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-        .navbar a {
-            color: white;
-            font-size: 18px;
-            margin: 0 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .logo {
-            margin-top: 20px;
-            position: relative;
-        }
-
-        .logo img {
-            height: 150px;
-        }
-
-        .custom-ticker {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 60px;
-            background-color: #39FF14;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
-            color: black;
-        }
-
-        .custom-ticker span {
-            display: inline;
-        }
-
-        .custom-ticker .hell {
-            animation: blinkFast 0.3s step-end infinite;
-        }
-
-        @keyframes blinkFast {
-            50% {
-                visibility: hidden;
-            }
-        }
-
-        .moving-banner {
-            width: 100%;
-            height: 40px;
-            background: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518') repeat-x;
-            animation: banner 10s linear infinite;
-        }
-
-        @keyframes banner {
-            from {
-                background-position: 0 0;
-            }
-            to {
-                background-position: -100% 0;
-            }
-        }
-
-        .menu {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 15px 0;
-            background-color: black;
-            border-bottom: 2px solid white;
-        }
-
-        .menu a {
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: underline;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-
-        .social-icons img {
-            width: 30px;
-            margin: 0 10px;
-        }
-
-        .out-now {
-            margin-top: 5px;
-            font-size: 24px;
-        }
-
-        .stream-link {
-            font-size: 20px;
-            color: #39FF14;
-            text-decoration: none;
-        }
-
-        .cover-art {
-            border: 3px dotted #39FF14;
-            display: inline-block;
-            margin: 5px;
-            max-width: 90%;
-            width: 300px; /* Ensures it fits iPhone screens */
-        }
-
-        .extra-image {
-            border: 3px dotted #39FF14;
-            margin-top: 15px;
-        }
-
-        .section {
-            display: none;
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-            height: 100vh;
-        }
-
-        .store iframe {
-            width: 100%;
-            height: 90vh;
-            border: none;
-        }
-
-        .footer {
-            margin-top: 50px;
-            font-size: 14px;
-            position: relative;
-        }
-
-        .flag {
-            margin-top: 20px;
-        }
-
-        .flag img {
-            width: 50px;
-            margin: 0 5px;
-        }
-
-        .ticker-fixed {
-            width: 100%;
-            height: 40px;
-            background: url('https://elite-ware.com/cdn/shop/t/6/assets/stars_bannerrr.png?v=65387509887889631421724254518') repeat-x;
-            animation: banner 10s linear infinite;
-        }
-
-        .green-border {
-            border: 3px solid #39FF14;
-        }
-
-        @media (max-width: 768px) {
-            .cover-art {
-                width: 90%;
-                max-width: 400px;
-            }
-        }
-    </style>
-    <script>
-        function showSection(section) {
-            document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
-            document.querySelector('.' + section).style.display = 'block';
-            window.scrollTo(0, document.querySelector('.' + section).offsetTop);
-        }
-    </script>
+  <style>
+    body {
+      background-color: white;
+      margin: 0;
+      font-family: 'Anton', sans-serif;
+      color: black;
+      text-align: center;
+    }
+    /* Logo */
+    .logo img {
+      max-width: 300px;
+      margin: 20px auto;
+    }
+    /* Ticker */
+    .ticker-wrap {
+      overflow: hidden;
+      background-color: black;
+      color: white;
+      font-family: Impact, Charcoal, sans-serif;
+      font-size: 24px;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+    .ticker {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 15s linear infinite;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+    /* Navbar */
+    .navbar {
+      background-color: black;
+      padding: 10px 0;
+    }
+    .navbar a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    /* Sections */
+    section {
+      padding: 50px 20px;
+      border-bottom: 2px solid #ddd;
+    }
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .socials a {
+      display: block;
+      margin: 10px 0;
+      color: black;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    .socials a:hover {
+      text-decoration: underline;
+    }
+    /* Event */
+    .event {
+      display: inline-block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .calendar-icon {
+      width: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    /* Store */
+    .store-container {
+      display: inline-block;
+      border: 5px solid black;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 14px;
+      color: black;
+    }
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <div class="logo">
-            <img src="https://i.ibb.co/QjXLYVWh/IMG-4423.png" alt="Logo">
-        </div>
-        <div class="flag">
-            <img src="https://media.tenor.com/A5Hi9Uemg44AAAAi/skull-laugh.gif" alt="Skull GIF">
-        </div>
-        <div class="custom-ticker">
-            <span>WELCOME TO <span class="hell">HELL</span>, WE LOVE YOU HERE!</span>
-        </div>
-        <div class="ticker-fixed"></div>
-    </div>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="https://i.ibb.co/JjL9H8W/36-DC6-A57-C88-B-41-CA-94-BB-481-DF2-A6026-A.png" alt="Sir Abe Logo">
+  </div>
 
-    <div class="menu">
-        <a onclick="showSection('shows')">SHOWS</a>
-        <a onclick="showSection('store')">STORE</a>
-        <a onclick="showSection('about')">ABOUT</a>
-        <a onclick="showSection('privacy-policy')">PRIVACY POLICY</a>
+  <!-- Ticker -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      ★ WELCOME TO HELL, WE LOVE YOU HERE! ★
     </div>
+  </div>
 
-    <div id="music" class="social-icons">
-        <a href="https://www.instagram.com/omgsirabe"><img src="https://i.ibb.co/2W9LD6s/IMG-9462.png" alt="Instagram"></a>
-        <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=EnQrt_SoSsmltIdf4wke4Q"><img src="https://i.ibb.co/d2byFgq/IMG-9464.webp" alt="Spotify"></a>
-        <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116"><img src="https://i.ibb.co/K2KXyLX/IMG-9466.png" alt="Apple Music"></a>
-        <a href="https://youtube.com/@sogothimded?feature=shared"><img src="https://i.ibb.co/tX82LkF/IMG-9467.webp" alt="YouTube"></a>
-        <a href="https://on.soundcloud.com/LoEDY5wDsVV3BBnA9"><img src="https://i.ibb.co/k1jT7Mm/IMG-9468.png" alt="SoundCloud"></a>
-    </div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#shows">Shows/Events</a>
+    <a href="#store">Store</a>
+    <a href="#about">About</a>
+  </div>
 
-    <div class="out-now">
-        <p>LOSER OUT NOW</p>
-        <p><a href="https://hyperfollow.com/loserep" class="stream-link">CLICK ME TO STREAM</a></p>
-        <a href="https://hyperfollow.com/loserep">
-            <img src="https://images.genius.com/4270364e63587fe887e4da70b0a4eccf.599x599x1.jpg" alt="Loser Cover" class="cover-art">
-        </a>
+  <!-- Sections -->
+  <section id="home">
+    <h2>HOME</h2>
+    <div class="socials">
+      <a href="https://www.instagram.com/omgsirabe?igsh=djU3cXh4eDE2Z200&utm_source=qr" target="_blank">Instagram</a>
+      <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116" target="_blank">Apple Music</a>
+      <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=QgUvZ-qgRr-W0i_7Q5gPoA" target="_blank">Spotify</a>
+      <a href="https://on.soundcloud.com/spVot4nuw6mQ3Adp8" target="_blank">SoundCloud</a>
+      <a href="https://youtube.com/@sogothimded?si=rMyxB-CqfobZVtaq" target="_blank">YouTube</a>
+      <a href="https://x.com/siraberiot" target="_blank">X / Twitter</a>
     </div>
+  </section>
 
-    <div class="dead-alive-collection">
-        <p>SIR ABE DEAD ALIVE COLLECTION AVAILABLE NOW</p>
-        <div class="green-border">
-            <iframe src="https://sir-abe-store.printify.me" height="400" width="100%"></iframe>
-        </div>
+  <section id="shows">
+    <h2>SHOWS / EVENTS</h2>
+    <div class="event">
+      <img class="calendar-icon" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Calendar_font_awesome.svg" alt="Calendar">
+      <p><strong>May 18, 2025</strong></p>
+      <img src="https://i.ibb.co/670YKC1w/B28-C7-AA3-21-C4-4115-BA91-53-B0-F3927904.jpg" alt="Event Flyer" style="width:80%; max-width:600px; margin-top:20px;">
     </div>
+  </section>
 
-    <div class="footer">
-        <p>© 2025 $IR ABE</p>
+  <section id="store">
+    <h2>STORE</h2>
+    <h3><strong>SIR ABE DEAD ALIVE COLLECTION</strong></h3>
+    <div class="store-container">
+      <iframe 
+        src="https://sir-abe-store.printify.me" 
+        width="600" 
+        height="600" 
+        style="border:none; overflow:hidden;" 
+        scrolling="yes" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
     </div>
+  </section>
+
+  <section id="about">
+    <h2>ABOUT</h2>
+    <p>This is the official website for the artist $ir Abe. We use cookies and similar technologies to enhance your experience and provide services. Information collected on this site will be handled according to privacy and security policies. By using this website, you agree to these terms.</p>
+    <p>All rights reserved. Unauthorized use or duplication is prohibited.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; Sir Abe 2025
+  </footer>
 
 </body>
 </html>
