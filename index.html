@@ -17,10 +17,9 @@
       font-family: 'Anton', sans-serif;
       color: black;
       text-align: center;
-      text-transform: uppercase; /* Capitalize all text */
+      text-transform: uppercase;
     }
 
-    /* Logo & Head GIFs */
     .logo-wrap {
       display: flex;
       align-items: center;
@@ -40,7 +39,6 @@
       transform: scaleX(-1);
     }
 
-    /* Ticker */
     .ticker-wrap {
       overflow: hidden;
       background-color: black;
@@ -49,6 +47,7 @@
       font-size: 22px;
       white-space: nowrap;
       box-sizing: border-box;
+      margin-bottom: 10px; /* Space between ticker and navbar */
     }
     .ticker {
       display: inline-block;
@@ -60,7 +59,12 @@
       100% { transform: translateX(-100%); }
     }
 
-    /* Navbar */
+    .ticker img.swirly-inline {
+      height: 22px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
     .navbar {
       background-color: black;
       padding: 12px 0;
@@ -73,8 +77,8 @@
       margin: 0 18px;
       text-decoration: none;
       font-size: 18px;
-      font-weight: 700; /* Bold Oswald font for navbar */
-      font-family: 'Oswald', sans-serif; /* Updated font for navbar */
+      font-weight: 700;
+      font-family: 'Oswald', sans-serif;
       transition: 0.3s;
     }
     .navbar a:hover {
@@ -82,7 +86,6 @@
       text-decoration: underline;
     }
 
-    /* Sections */
     section {
       padding: 60px 20px;
       border-bottom: 2px solid #eee;
@@ -90,15 +93,14 @@
     section h2 {
       font-size: 36px;
       margin-bottom: 25px;
-      font-family: 'Oswald', sans-serif; /* Bold Oswald font for headings */
+      font-family: 'Oswald', sans-serif;
       font-weight: 700;
     }
     section p {
       font-family: 'Oswald', sans-serif;
-      font-weight: 300; /* Thin Oswald font for regular text */
+      font-weight: 300;
     }
 
-    /* Socials */
     .socials a {
       display: flex;
       align-items: center;
@@ -107,7 +109,7 @@
       color: black;
       font-size: 20px;
       text-decoration: none;
-      font-weight: 700; /* Bold Oswald font for socials */
+      font-weight: 700;
       transition: 0.3s;
     }
     .socials a img {
@@ -120,7 +122,6 @@
       text-decoration: underline;
     }
 
-    /* Pre-save Section */
     .presave-container {
       margin: 30px 0;
     }
@@ -148,14 +149,12 @@
       text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
     }
 
-    /* Event */
     .event {
       display: inline-block;
       text-align: center;
       margin-top: 20px;
     }
 
-    /* Store */
     .store-container {
       width: 100%;
       max-width: 800px;
@@ -175,7 +174,6 @@
       border: none;
     }
 
-    /* Footer */
     footer {
       margin-top: 50px;
       padding: 20px;
@@ -183,7 +181,6 @@
       color: black;
     }
 
-    /* Responsive Tweaks */
     @media (max-width: 768px) {
       .navbar a {
         margin: 10px 12px;
@@ -207,7 +204,7 @@
 </head>
 <body>
 
-  <!-- Logo with Head GIFs -->
+  <!-- Logo -->
   <div class="logo-wrap">
     <img class="swirly mirror" src="https://i.ibb.co/KpTnfWG9/IMG-1718.gif" alt="Swirly Head Left">
     <img class="logo" src="https://i.ibb.co/JjL9H8Wj/36-DC6-A57-C88-B-41-CA-94-BB-481-DF2-A6026-A.png" alt="Sir Abe Logo">
@@ -217,7 +214,9 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker">
+      <img class="swirly-inline" src="https://i.ibb.co/KpTnfWG9/IMG-1718.gif" alt="Swirly Left">
       ★ WELCOME TO HELL, WE LOVE YOU HERE! ★
+      <img class="swirly-inline" src="https://i.ibb.co/KpTnfWG9/IMG-1718.gif" alt="Swirly Right">
     </div>
   </div>
 
@@ -232,14 +231,12 @@
   <!-- Sections -->
   <section id="home">
     <h2>HOME</h2>
-    <!-- iPhone 4 Graphic + Pre-save Button -->
     <div class="presave-container">
       <img src="https://i.ibb.co/v6knGTwM/61303-A97-BD65-43-C2-BCAD-4-AF376892732.png" alt="#202501 iPhone Graphic">
       <div class="presave-button">
         <a href="https://distrokid.com/hyperfollow/irabe/202501" target="_blank">CLICK ME TO PRE SAVE</a>
       </div>
     </div>
-    <!-- Socials -->
     <div class="socials">
       <a href="https://www.instagram.com/omgsirabe?igsh=djU3cXh4eDE2Z200&utm_source=qr" target="_blank">
         <img src="https://static.vecteezy.com/system/resources/previews/023/986/885/non_2x/instagram-logo-instagram-logo-transparent-instagram-icon-transparent-free-free-png.png" alt="Instagram">
@@ -294,7 +291,6 @@
     <p>ALL RIGHTS RESERVED. UNAUTHORIZED USE OR DUPLICATION IS PROHIBITED.</p>
   </section>
 
-  <!-- Footer -->
   <footer>
     © 2025 $IR ABE. ALL RIGHTS RESERVED. FOR BOOKING INQUIRIES, PRESS, OR COLLABORATIONS, CONTACT DEREK BOOTH AT DEREKBOOTHH@GMAIL.COM.
   </footer>
