@@ -18,6 +18,7 @@
       color: black;
       text-align: center;
       text-transform: uppercase;
+      overflow-x: hidden;
     }
 
     .logo-wrap {
@@ -25,15 +26,18 @@
       align-items: center;
       justify-content: center;
       margin: 30px auto 10px;
+      max-width: 100%;
+      flex-wrap: nowrap;
     }
     .logo-wrap img.logo {
       width: 250px;
-      max-width: 70%;
+      max-width: 60%;
     }
     .logo-wrap img.swirl {
-      width: 80px;
+      width: 50px;
       height: auto;
-      margin: 0 10px;
+      margin: 0 5px;
+      flex-shrink: 0;
     }
 
     .ticker-wrap {
