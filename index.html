@@ -1,206 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>$ir Abe Official Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$ir Abe Official Site</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
 
-  <style>
-    body {
-      background-color: white;
-      margin: 0;
-      font-family: 'Anton', sans-serif;
-      color: black;
-      text-align: center;
-    }
-    /* Logo */
-    .logo img {
-      width: 250px;
-      max-width: 90%;
-      margin: 30px auto 10px;
-    }
-    /* Ticker */
-    .ticker-wrap {
-      overflow: hidden;
-      background-color: black;
-      color: white;
-      font-family: Impact, Charcoal, sans-serif;
-      font-size: 22px;
-      white-space: nowrap;
-      box-sizing: border-box;
-    }
-    .ticker {
-      display: inline-block;
-      padding-left: 100%;
-      animation: ticker 15s linear infinite;
-    }
-    @keyframes ticker {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
-    }
-    /* Navbar */
-    .navbar {
-      background-color: black;
-      padding: 12px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .navbar a {
-      color: white;
-      margin: 0 18px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .navbar a:hover {
-      color: grey;
-      text-decoration: underline;
-    }
-    /* Sections */
-    section {
-      padding: 60px 20px;
-      border-bottom: 2px solid #eee;
-    }
-    section h2 {
-      font-size: 36px;
-      margin-bottom: 25px;
-    }
-    .socials a {
-      display: block;
-      margin: 12px 0;
-      color: black;
-      font-size: 20px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .socials a:hover {
-      color: grey;
-      text-decoration: underline;
-    }
-    /* Event */
-    .event {
-      display: inline-block;
-      text-align: center;
-      margin-top: 20px;
-    }
-    /* Store */
-    .store-container {
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-      border: 5px solid black;
-      padding: 0;
-      box-sizing: border-box;
-      position: relative;
-      padding-top: 100%; /* Makes it a perfect square */
-    }
-    .store-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    /* Footer */
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      font-size: 14px;
-      color: black;
-    }
-    /* Responsive Tweaks */
-    @media (max-width: 768px) {
-      .navbar a {
-        margin: 10px 12px;
-        font-size: 16px;
-      }
-      section h2 {
-        font-size: 28px;
-      }
-      .socials a {
-        font-size: 18px;
-      }
-      .store-container {
-        width: 100%;
-        padding-top: 120%; /* Adjust for better mobile fit */
-      }
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+<style>
+html {
+scroll-behavior: smooth;
+font-size: 16px;
+}
+
+body {
+background-color: white;
+margin: 0;
+font-family: 'Rock Salt', cursive;
+color: black;
+text-align: center;
+}
+
+/* Logo Section */
+.logo {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+margin-top: 20px;
+}
+.logo img.main-logo {
+width: 250px;
+max-width: 90%;
+}
+.logo img.swirly {
+width: 60px;
+height: auto;
+}
+
+/* Ticker */
+.ticker-wrap {
+overflow: hidden;
+background-color: black;
+color: white;
+font-family: Impact, Charcoal, sans-serif;
+font-size: 22px;
+white-space: nowrap;
+box-sizing: border-box;
+}
+.ticker {
+display: inline-block;
+padding-left: 100%;
+animation: ticker 7s linear infinite;
+}
+@keyframes ticker {
+0% { transform: translateX(0%); }
+100% { transform: translateX(-100%); }
+}
+
+/* Navbar */
+.navbar {
+background-color: black;
+padding: 12px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+.navbar a {
+color: white;
+margin: 0 18px;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+transition: 0.3s;
+}
+.navbar a:hover {
+color: grey;
+text-decoration: underline;
+}
+
+/* Sections */
+section {
+padding: 60px 20px;
+border-bottom: 2px solid #eee;
+}
+section h2 {
+font-size: 36px;
+margin-bottom: 25px;
+}
+
+/* HOME Section */
+#home h1 {
+font-family: 'SF Pro Display', sans-serif;
+font-weight: 400;
+font-size: 40px;
+margin-bottom: 20px;
+}
+.presave-button {
+display: inline-block;
+margin: 20px auto;
+}
+.presave-button img {
+width: 220px;
+max-width: 90%;
+filter: brightness(0.1); /* makes the button appear darker/glossier */
+transition: 0.3s;
+}
+.presave-button img:hover {
+filter: brightness(0.3);
+}
+
+/* Socials */
+.socials a {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+margin: 12px 0;
+color: black;
+font-size: 20px;
+text-decoration: none;
+transition: 0.3s;
+}
+.socials a:hover {
+color: grey;
+text-decoration: underline;
+}
+.socials img {
+width: 20px;
+height: 20px;
+}
+
+/* Event */
+.event {
+display: inline-block;
+text-align: center;
+margin-top: 20px;
+}
+
+/* Store */
+.store-container {
+width: 100%;
+max-width: 800px;
+margin: 20px auto;
+border: 5px solid black;
+padding: 0;
+box-sizing: border-box;
+position: relative;
+padding-top: 100%;
+}
+.store-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: none;
+}
+
+/* Footer */
+footer {
+margin-top: 50px;
+padding: 20px;
+font-size: 12px;
+color: black;
+}
+
+/* Responsive Tweaks for iPhone 14 */
+@media (max-width: 430px) {
+html {
+font-size: 15px;
+}
+.navbar a {
+margin: 10px 12px;
+font-size: 16px;
+}
+section h2 {
+font-size: 28px;
+}
+#home h1 {
+font-size: 32px;
+}
+.socials a {
+font-size: 18px;
+}
+.store-container {
+padding-top: 120%;
+}
+.logo img.swirly {
+width: 50px;
+}
+}
+</style>
 </head>
 <body>
 
-  <!-- Logo -->
-  <div class="logo">
-    <img src="https://i.ibb.co/JjL9H8Wj/36-DC6-A57-C88-B-41-CA-94-BB-481-DF2-A6026-A.png" alt="Sir Abe Logo">
-  </div>
+<!-- Logo Section -->
+<div class="logo">
+<img class="swirly" src="https://d2pnsmz45e0v9n.cloudfront.net/d48vor%2Fpreview%2F66796964%2Fmain_large.gif?response-content-disposition=inline%3Bfilename%3D%22main_large.gif%22%3B&response-content-type=image%2Fgif&Expires=1746295021&Signature=SpLlPVGwZPSVWm-CuiUSV87WEL9ZMUQ8Tsm0GX-v~zohYKt1WVf-giCb-GYl878rj5ltIRkRv2kHg5hJHt5lY9ZKatw-mJoGMMXB~fFg-bjr~NQtUT~04JrsOlfoaAOqh0drBofL739J1PFU73WswfS3tDvRuF1imzpEG2z28JlaN-tR6rCNELZvQKhpJcL30WmnGmr-JxJXqfL1UTTh7ZqYxhBnW66pQYcSrvY3Y8h-KlDmqdeksshakdLXWZZhT3Gveh5WyEljH2BMxTxej4WFhYTHZCFsr~HrdNDiOokvYGjrLDllJJCHDEWgXbpRAG22WsVSHGCM~gn9othVZg__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ" alt="Swirly Head">
+<img class="main-logo" src="https://i.ibb.co/JjL9H8Wj/36-DC6-A57-C88-B-41-CA-94-BB-481-DF2-A6026-A.png" alt="Sir Abe Logo">
+<img class="swirly" style="transform: scaleX(-1);" src="https://d2pnsmz45e0v9n.cloudfront.net/d48vor%2Fpreview%2F66796964%2Fmain_large.gif?response-content-disposition=inline%3Bfilename%3D%22main_large.gif%22%3B&response-content-type=image%2Fgif&Expires=1746295021&Signature=SpLlPVGwZPSVWm-CuiUSV87WEL9ZMUQ8Tsm0GX-v~zohYKt1WVf-giCb-GYl878rj5ltIRkRv2kHg5hJHt5lY9ZKatw-mJoGMMXB~fFg-bjr~NQtUT~04JrsOlfoaAOqh0drBofL739J1PFU73WswfS3tDvRuF1imzpEG2z28JlaN-tR6rCNELZvQKhpJcL30WmnGmr-JxJXqfL1UTTh7ZqYxhBnW66pQYcSrvY3Y8h-KlDmqdeksshakdLXWZZhT3Gveh5WyEljH2BMxTxej4WFhYTHZCFsr~HrdNDiOokvYGjrLDllJJCHDEWgXbpRAG22WsVSHGCM~gn9othVZg__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ" alt="Swirly Head Mirrored">
+</div>
 
-  <!-- Ticker -->
-  <div class="ticker-wrap">
-    <div class="ticker">
-      ★ WELCOME TO HELL, WE LOVE YOU HERE! ★
-    </div>
-  </div>
+<!-- Ticker -->
+<div class="ticker-wrap">
+<div class="ticker">
+★ WELCOME TO HELL, WE LOVE YOU HERE! ★
+</div>
+</div>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#shows">Shows/Events</a>
-    <a href="#store">Store</a>
-    <a href="#about">About</a>
-  </div>
+<!-- Navbar -->
+<div class="navbar">
+<a href="#home">Home</a>
+<a href="#shows">Shows/Events</a>
+<a href="#store">Store</a>
+<a href="#about">About</a>
+</div>
 
-  <!-- Sections -->
-  <section id="home">
-    <h2>HOME</h2>
-    <div class="socials">
-      <a href="https://www.instagram.com/omgsirabe?igsh=djU3cXh4eDE2Z200&utm_source=qr" target="_blank">Instagram</a>
-      <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116" target="_blank">Apple Music</a>
-      <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=QgUvZ-qgRr-W0i_7Q5gPoA" target="_blank">Spotify</a>
-      <a href="https://on.soundcloud.com/spVot4nuw6mQ3Adp8" target="_blank">SoundCloud</a>
-      <a href="https://youtube.com/@sogothimded?si=rMyxB-CqfobZVtaq" target="_blank">YouTube</a>
-      <a href="https://x.com/siraberiot" target="_blank">X / Twitter</a>
-    </div>
-  </section>
+<!-- Sections -->
+<section id="home">
+<h1>#202501</h1>
+<div class="presave-button">
+<a href="https://distrokid.com/hyperfollow/irabe/202501" target="_blank">
+<img src="https://image.similarpng.com/file/similarpng/original-picture/2021/10/Black-Glossy-web-button-on-transparent-background-PNG.png" alt="Pre-Save Button">
+</a>
+</div>
+<div class="socials">
+<a href="https://www.instagram.com/omgsirabe?igsh=djU3cXh4eDE2Z200&utm_source=qr" target="_blank">
+<img src="https://static.vecteezy.com/system/resources/previews/023/986/885/non_2x/instagram-logo-instagram-logo-transparent-instagram-icon-transparent-free-free-png.png" alt="Instagram">Instagram
+</a>
+<a href="https://music.apple.com/us/artist/%24ir-abe/1583168116" target="_blank">
+<img src="https://img.icons8.com/ios_filled/512/apple-music.png" alt="Apple Music">Apple Music
+</a>
+<a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=QgUvZ-qgRr-W0i_7Q5gPoA" target="_blank">
+<img src="https://images.icon-icons.com/2428/PNG/512/spotify_black_logo_icon_147079.png" alt="Spotify">Spotify
+</a>
+<a href="https://on.soundcloud.com/spVot4nuw6mQ3Adp8" target="_blank">
+<img src="https://www.iconninja.com/files/313/200/942/soundcloud-black-icon.png" alt="SoundCloud">SoundCloud
+</a>
+<a href="https://youtube.com/@sogothimded?si=rMyxB-CqfobZVtaq" target="_blank">
+<img src="https://img.icons8.com/ios11/512/youtube-play.png" alt="YouTube">YouTube
+</a>
+<a href="https://x.com/siraberiot" target="_blank">
+<img src="https://www.sendible.com/hs-fs/hubfs/blog-import/2024/02-24-Feb/social-media-icons-x-logo-black.png?width=120&height=123&name=social-media-icons-x-logo-black.png" alt="Twitter">X / Twitter
+</a>
+</div>
+</section>
 
-  <section id="shows">
-    <h2>SHOWS / EVENTS</h2>
-    <div class="event">
-      <img src="https://i.ibb.co/670YKC1w/B28-C7-AA3-21-C4-4115-BA91-53-B0-F3927904.jpg" alt="Event Flyer" style="width:80%; max-width:600px; margin-top:20px;">
-    </div>
-  </section>
+<section id="shows">
+<h2>SHOWS / EVENTS</h2>
+<div class="event">
+<img src="https://i.ibb.co/670YKC1w/B28-C7-AA3-21-C4-4115-BA91-53-B0-F3927904.jpg" alt="Event Flyer" style="width:80%; max-width:600px; margin-top:20px;">
+</div>
+</section>
 
-  <section id="store">
-    <h2>STORE</h2>
-    <h3><strong>SIR ABE DEAD ALIVE COLLECTION</strong></h3>
-    <div class="store-container">
-      <iframe 
-        src="https://sir-abe-store.printify.me" 
-        scrolling="yes" 
-        frameborder="0" 
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
+<section id="store">
+<h2>STORE</h2>
+<h3><strong>SIR ABE DEAD ALIVE COLLECTION</strong></h3>
+<div class="store-container">
+<iframe 
+src="https://sir-abe-store.printify.me" 
+scrolling="yes" 
+frameborder="0" 
+allowfullscreen>
+</iframe>
+</div>
+</section>
 
-  <section id="about">
-    <h2>ABOUT</h2>
-    <p>This is the official website for the artist $ir Abe. We use cookies and similar technologies to enhance your experience and provide services. Information collected on this site will be handled according to privacy and security policies. By using this website, you agree to these terms.</p>
-    <p>All rights reserved. Unauthorized use or duplication is prohibited.</p>
-  </section>
+<section id="about">
+<h2>ABOUT</h2>
+<p>This is the official website for the artist $ir Abe. We use cookies and similar technologies to enhance your experience and provide services. Information collected on this site will be handled according to privacy and security policies. By using this website, you agree to these terms.</p>
+<p>All rights reserved. Unauthorized use or duplication is prohibited.</p>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; Sir Abe 2025
-  </footer>
+<!-- Footer -->
+<footer>
+&copy; 2025 $ir Abe. All rights reserved. For booking inquiries, press, or collaborations, contact Derek Booth at derekboothh@gmail.com.
+</footer>
 
 </body>
 </html>
