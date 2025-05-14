@@ -1,3 +1,63 @@
+<!-- Album Countdown Splash Screen -->
+<style>
+  #splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.ibb.co/wNs6svN3/41-BD8-E59-F5-B9-4-CEF-86-F9-29-CC9-F185442.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+  }
+
+  #splash-screen iframe {
+    max-width: 90%;
+    border: none;
+  }
+
+  #enter-site-btn {
+    margin-top: 20px;
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  body.splash-active {
+    overflow: hidden;
+  }
+</style>
+
+<div id="splash-screen">
+  <iframe width="300" height="68" src="https://w2.countingdownto.com/6299518" frameborder="0"></iframe>
+  <p style="color:white; margin-top:10px;">
+    Countdown by <a href="https://countingdownto.com/" target="_blank" style="color:white;">countingdownto.com</a>
+  </p>
+  <button id="enter-site-btn">Enter Site</button>
+</div>
+
+<script>
+  // Prevent scrolling on load
+  document.body.classList.add("splash-active");
+
+  // When "Enter Site" is clicked, hide the splash screen
+  document.getElementById("enter-site-btn").addEventListener("click", function () {
+    document.getElementById("splash-screen").style.display = "none";
+    document.body.classList.remove("splash-active");
+  });
+</script>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
