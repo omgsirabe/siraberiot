@@ -33,17 +33,11 @@
       width: 250px;
       max-width: 60%;
     }
-    .logo-wrap img.swirl {
-      width: 50px;
-      height: auto;
-      margin: 0 5px;
-      flex-shrink: 0;
-    }
 
     .ticker-wrap {
       overflow: hidden;
-      background-color: white;
-      color: black;
+      background-color: black;
+      color: limegreen;
       font-family: Impact, Charcoal, sans-serif;
       font-size: 22px;
       white-space: nowrap;
@@ -60,21 +54,19 @@
       100% { transform: translateX(-100%); }
     }
 
-    .ticker img.swirly-inline {
-      height: 22px;
-      vertical-align: middle;
-      margin: 0 5px;
+    .ticker .hotpink-star {
+      color: hotpink;
     }
 
     .navbar {
-      background-color: white;
+      background-color: black;
       padding: 12px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
     .navbar a {
-      color: black;
+      color: white;
       margin: 0 18px;
       text-decoration: none;
       font-size: 18px;
@@ -117,6 +109,7 @@
       width: 20px;
       height: 20px;
       margin-right: 8px;
+      filter: brightness(0) invert(1);
     }
     .socials a:hover {
       color: grey;
@@ -204,17 +197,13 @@
 
   <!-- Logo -->
   <div class="logo-wrap">
-    <img class="swirl" src="https://i.ibb.co/RGrCqv5X/IMG-1730.gif" alt="Swirl Left">
     <img class="logo" src="https://i.ibb.co/FLtqy1NJ/6-A2-B29-E5-6-F06-4170-B2-C6-26410-E319072.png" alt="Sir Abe Logo">
-    <img class="swirl" src="https://i.ibb.co/RGrCqv5X/IMG-1730.gif" alt="Swirl Right">
   </div>
 
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker">
-      <img class="swirly-inline" src="https://i.ibb.co/KpTnfWG9/IMG-1718.gif" alt="Swirly Left">
-      ★ WELCOME TO HELL, WE LOVE YOU HERE! ★
-      <img class="swirly-inline" src="https://i.ibb.co/KpTnfWG9/IMG-1718.gif" alt="Swirly Right">
+      <span class="hotpink-star">★</span> WELCOME TO HELL, WE LOVE YOU HERE! <span class="hotpink-star">★</span>
     </div>
   </div>
 
@@ -243,7 +232,7 @@
         Instagram
       </a>
       <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116" target="_blank">
-        <img src="https://img.icons8.com/ios_filled/512/apple-music.png" alt="Apple Music">
+        <img src="https://img.icons8.com/ios-filled/512/apple-music.png" alt="Apple Music">
         Apple Music
       </a>
       <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=QgUvZ-qgRr-W0i_7Q5gPoA" target="_blank">
