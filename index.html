@@ -21,6 +21,12 @@
       overflow-x: hidden;
     }
 
+    /* Accent + Theme Colors */
+    :root {
+      --sunset-orange: #ff4500; /* bold, paramore-style orange */
+      --secondary-white: #ffffff;
+    }
+
     .logo-wrap {
       display: flex;
       align-items: center;
@@ -32,30 +38,37 @@
     .logo-wrap img.logo {
       width: 250px;
       max-width: 60%;
+      filter: drop-shadow(0 0 12px var(--sunset-orange));
+      animation: logoPulse 2.5s infinite alternate;
+    }
+
+    @keyframes logoPulse {
+      from { filter: drop-shadow(0 0 8px var(--sunset-orange)); }
+      to { filter: drop-shadow(0 0 25px var(--sunset-orange)); }
     }
 
     .ticker-wrap {
       overflow: hidden;
       background-color: black;
-      color: white;
+      color: var(--secondary-white);
       font-family: Impact, Charcoal, sans-serif;
       font-size: 22px;
       white-space: nowrap;
       box-sizing: border-box;
       margin-bottom: 10px;
+      text-shadow: 0 0 6px var(--sunset-orange);
     }
     .ticker {
       display: inline-block;
       padding-left: 100%;
-      animation: ticker 6s linear infinite;
+      animation: ticker 7s linear infinite;
     }
     @keyframes ticker {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-100%); }
     }
-
     .ticker .hotpink-star {
-      color: hotpink;
+      color: var(--sunset-orange);
     }
 
     .navbar {
@@ -64,9 +77,10 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      border-bottom: 2px solid var(--sunset-orange);
     }
     .navbar a {
-      color: white;
+      color: var(--sunset-orange);
       margin: 0 18px;
       text-decoration: none;
       font-size: 18px;
@@ -75,8 +89,9 @@
       transition: 0.3s;
     }
     .navbar a:hover {
-      color: grey;
+      color: var(--secondary-white);
       text-decoration: underline;
+      text-shadow: 0 0 10px var(--sunset-orange);
     }
 
     section {
@@ -88,10 +103,13 @@
       margin-bottom: 25px;
       font-family: 'Oswald', sans-serif;
       font-weight: 700;
+      color: var(--sunset-orange);
+      text-shadow: 0 0 12px var(--sunset-orange);
     }
     section p {
       font-family: 'Oswald', sans-serif;
       font-weight: 300;
+      color: var(--secondary-white);
     }
 
     .socials a {
@@ -99,7 +117,7 @@
       align-items: center;
       justify-content: center;
       margin: 12px 0;
-      color: white;
+      color: var(--secondary-white);
       font-size: 20px;
       text-decoration: none;
       font-weight: 700;
@@ -112,8 +130,9 @@
       filter: brightness(0) invert(1);
     }
     .socials a:hover {
-      color: grey;
+      color: var(--sunset-orange);
       text-decoration: underline;
+      text-shadow: 0 0 10px var(--sunset-orange);
     }
 
     .presave-container {
@@ -122,18 +141,18 @@
     .presave-container img {
       width: 180px;
       max-width: 90%;
-      border: 5px solid white;
-      box-shadow: 0 0 20px white, 0 0 40px white, 0 0 60px white;
+      border: 5px solid var(--sunset-orange);
+      box-shadow: 0 0 20px var(--sunset-orange), 0 0 40px var(--sunset-orange), 0 0 60px var(--sunset-orange);
       transition: transform 0.3s ease;
       animation: pulseGlow 2s infinite alternate;
     }
 
     @keyframes pulseGlow {
       from {
-        box-shadow: 0 0 15px white, 0 0 25px white;
+        box-shadow: 0 0 15px var(--sunset-orange), 0 0 25px var(--sunset-orange);
       }
       to {
-        box-shadow: 0 0 30px white, 0 0 50px white, 0 0 70px white;
+        box-shadow: 0 0 30px var(--sunset-orange), 0 0 50px var(--sunset-orange), 0 0 70px var(--sunset-orange);
       }
     }
 
@@ -142,23 +161,23 @@
     }
     .presave-button a {
       display: inline-block;
-      color: white;
+      color: var(--sunset-orange);
       font-family: 'SF Pro Display', sans-serif;
       font-weight: 500;
       font-size: 14px;
       padding: 14px 32px;
       text-decoration: none;
-      border: 2px solid white;
+      border: 2px solid var(--sunset-orange);
       background: none;
-      text-shadow: 0 0 5px white, 0 0 10px white;
+      text-shadow: 0 0 5px var(--sunset-orange), 0 0 10px var(--sunset-orange);
       animation: flicker 2s infinite;
       transition: all 0.3s ease;
     }
 
     .presave-button a:hover {
-      background-color: white;
+      background-color: var(--sunset-orange);
       color: black;
-      box-shadow: 0 0 20px white, 0 0 40px white;
+      box-shadow: 0 0 20px var(--sunset-orange), 0 0 40px var(--sunset-orange);
       transform: scale(1.05);
     }
 
@@ -169,21 +188,25 @@
       55% { opacity: 0.9; }
     }
 
+    /* Shows/Events - simplified */
     .event {
-      display: inline-block;
-      text-align: center;
-      margin-top: 20px;
+      font-size: 48px;
+      font-weight: bold;
+      color: var(--sunset-orange);
+      text-shadow: 0 0 12px var(--sunset-orange);
+      animation: flicker 3s infinite;
     }
 
     .store-container {
       width: 100%;
       max-width: 800px;
       margin: 20px auto;
-      border: 5px solid hotpink;
+      border: 5px solid var(--sunset-orange);
       padding: 0;
       box-sizing: border-box;
       position: relative;
       padding-top: 100%;
+      box-shadow: 0 0 25px var(--sunset-orange);
     }
     .store-container iframe {
       position: absolute;
@@ -198,7 +221,9 @@
       margin-top: 50px;
       padding: 20px;
       font-size: 12px;
-      color: white;
+      color: var(--secondary-white);
+      border-top: 2px solid var(--sunset-orange);
+      text-shadow: 0 0 5px var(--sunset-orange);
     }
 
     @media (max-width: 768px) {
@@ -226,7 +251,7 @@
 
   <!-- Logo -->
   <div class="logo-wrap">
-    <img class="logo" src="https://i.ibb.co/FLtqy1NJ/6-A2-B29-E5-6-F06-4170-B2-C6-26410-E319072.png" alt="Sir Abe Logo">
+    <img class="logo" src="https://i.ibb.co/gbCJVZmm/00-FD8-AC0-F4-FF-49-AA-8-C49-1-C71031-B0-C0-A.png" alt="Sir Abe Logo">
   </div>
 
   <!-- Ticker -->
@@ -285,9 +310,8 @@
 
   <section id="shows">
     <h2>SHOWS / EVENTS</h2>
-    <p>RICHMOND, VA <br>AUGUST 16TH <br>10:10 PM <br>DM @OMGSIRABE ON INSTAGRAM FOR ADRESS</p>
     <div class="event">
-      <h3>TBA</h3>
+      TBA
     </div>
   </section>
 
