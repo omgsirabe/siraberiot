@@ -21,12 +21,6 @@
       overflow-x: hidden;
     }
 
-    /* Accent + Theme Colors */
-    :root {
-      --sunset-orange: #ff4500; /* bold, paramore-style orange */
-      --secondary-white: #ffffff;
-    }
-
     .logo-wrap {
       display: flex;
       align-items: center;
@@ -38,37 +32,30 @@
     .logo-wrap img.logo {
       width: 250px;
       max-width: 60%;
-      filter: drop-shadow(0 0 12px var(--sunset-orange));
-      animation: logoPulse 2.5s infinite alternate;
-    }
-
-    @keyframes logoPulse {
-      from { filter: drop-shadow(0 0 8px var(--sunset-orange)); }
-      to { filter: drop-shadow(0 0 25px var(--sunset-orange)); }
     }
 
     .ticker-wrap {
       overflow: hidden;
       background-color: black;
-      color: var(--secondary-white);
+      color: limegreen;
       font-family: Impact, Charcoal, sans-serif;
       font-size: 22px;
       white-space: nowrap;
       box-sizing: border-box;
       margin-bottom: 10px;
-      text-shadow: 0 0 6px var(--sunset-orange);
     }
     .ticker {
       display: inline-block;
       padding-left: 100%;
-      animation: ticker 7s linear infinite;
+      animation: ticker 6s linear infinite;
     }
     @keyframes ticker {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-100%); }
     }
+
     .ticker .hotpink-star {
-      color: var(--sunset-orange);
+      color: hotpink;
     }
 
     .navbar {
@@ -77,10 +64,9 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 2px solid var(--sunset-orange);
     }
     .navbar a {
-      color: var(--sunset-orange);
+      color: white;
       margin: 0 18px;
       text-decoration: none;
       font-size: 18px;
@@ -89,9 +75,8 @@
       transition: 0.3s;
     }
     .navbar a:hover {
-      color: var(--secondary-white);
+      color: grey;
       text-decoration: underline;
-      text-shadow: 0 0 10px var(--sunset-orange);
     }
 
     section {
@@ -103,13 +88,10 @@
       margin-bottom: 25px;
       font-family: 'Oswald', sans-serif;
       font-weight: 700;
-      color: var(--sunset-orange);
-      text-shadow: 0 0 12px var(--sunset-orange);
     }
     section p {
       font-family: 'Oswald', sans-serif;
       font-weight: 300;
-      color: var(--secondary-white);
     }
 
     .socials a {
@@ -117,7 +99,7 @@
       align-items: center;
       justify-content: center;
       margin: 12px 0;
-      color: var(--secondary-white);
+      color: white;
       font-size: 20px;
       text-decoration: none;
       font-weight: 700;
@@ -130,9 +112,8 @@
       filter: brightness(0) invert(1);
     }
     .socials a:hover {
-      color: var(--sunset-orange);
+      color: grey;
       text-decoration: underline;
-      text-shadow: 0 0 10px var(--sunset-orange);
     }
 
     .presave-container {
@@ -141,72 +122,39 @@
     .presave-container img {
       width: 180px;
       max-width: 90%;
-      border: 5px solid var(--sunset-orange);
-      box-shadow: 0 0 20px var(--sunset-orange), 0 0 40px var(--sunset-orange), 0 0 60px var(--sunset-orange);
-      transition: transform 0.3s ease;
-      animation: pulseGlow 2s infinite alternate;
+      border: 5px solid limegreen;
     }
-
-    @keyframes pulseGlow {
-      from {
-        box-shadow: 0 0 15px var(--sunset-orange), 0 0 25px var(--sunset-orange);
-      }
-      to {
-        box-shadow: 0 0 30px var(--sunset-orange), 0 0 50px var(--sunset-orange), 0 0 70px var(--sunset-orange);
-      }
-    }
-
     .presave-button {
       margin-top: 20px;
     }
     .presave-button a {
       display: inline-block;
-      color: var(--sunset-orange);
+      color: hotpink;
       font-family: 'SF Pro Display', sans-serif;
       font-weight: 500;
       font-size: 14px;
       padding: 14px 32px;
       text-decoration: none;
-      border: 2px solid var(--sunset-orange);
+      border: 2px solid hotpink;
       background: none;
-      text-shadow: 0 0 5px var(--sunset-orange), 0 0 10px var(--sunset-orange);
-      animation: flicker 2s infinite;
-      transition: all 0.3s ease;
+      text-shadow: none;
     }
 
-    .presave-button a:hover {
-      background-color: var(--sunset-orange);
-      color: black;
-      box-shadow: 0 0 20px var(--sunset-orange), 0 0 40px var(--sunset-orange);
-      transform: scale(1.05);
-    }
-
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      45% { opacity: 0.9; }
-      50% { opacity: 0.6; }
-      55% { opacity: 0.9; }
-    }
-
-    /* Shows/Events - simplified */
     .event {
-      font-size: 48px;
-      font-weight: bold;
-      color: var(--sunset-orange);
-      text-shadow: 0 0 12px var(--sunset-orange);
-      animation: flicker 3s infinite;
+      display: inline-block;
+      text-align: center;
+      margin-top: 20px;
     }
 
     .store-container {
       width: 100%;
       max-width: 800px;
       margin: 20px auto;
-      border: 5px solid var(--sunset-orange);
+      border: 5px solid white;
       padding: 0;
       box-sizing: border-box;
       position: relative;
       padding-top: 100%;
-      box-shadow: 0 0 25px var(--sunset-orange);
     }
     .store-container iframe {
       position: absolute;
@@ -221,9 +169,7 @@
       margin-top: 50px;
       padding: 20px;
       font-size: 12px;
-      color: var(--secondary-white);
-      border-top: 2px solid var(--sunset-orange);
-      text-shadow: 0 0 5px var(--sunset-orange);
+      color: white;
     }
 
     @media (max-width: 768px) {
@@ -251,7 +197,7 @@
 
   <!-- Logo -->
   <div class="logo-wrap">
-    <img class="logo" src="https://i.ibb.co/gbCJVZmm/00-FD8-AC0-F4-FF-49-AA-8-C49-1-C71031-B0-C0-A.png" alt="Sir Abe Logo">
+    <img class="logo" src="https://i.ibb.co/FLtqy1NJ/6-A2-B29-E5-6-F06-4170-B2-C6-26410-E319072.png" alt="Sir Abe Logo">
   </div>
 
   <!-- Ticker -->
@@ -273,11 +219,11 @@
   <section id="home">
     <h2>HOME</h2>
     <div class="presave-container">
-      <a href="https://distrokid.com/hyperfollow/irabe/psychosis" target="_blank">
-        <img src="https://i.ibb.co/670k22wn/1567457-C-C65-C-4-CBD-9944-46932-FC09547.jpg" alt="Psychosis Cover Art">
+      <a href="https://distrokid.com/hyperfollow/irabe/we-go-off-smoke55" target="_blank">
+        <img src="https://i.ibb.co/HpLSz1Wn/7-C5368-C3-7-CA3-4075-A002-1-EAD5-A47-BFA9.jpg" alt="We Go Off Cover Art">
       </a>
       <div class="presave-button">
-        <a href="https://distrokid.com/hyperfollow/irabe/psychosis" target="_blank">CLICK ME FOR PSYCHOSIS</a>
+        <a href="https://distrokid.com/hyperfollow/irabe/we-go-off-smoke55" target="_blank">CLICK ME TO PRE SAVE WE GO OFF</a>
       </div>
     </div>
     <div class="socials">
@@ -297,7 +243,7 @@
         <img src="https://www.iconninja.com/files/313/200/942/soundcloud-black-icon.png" alt="SoundCloud">
         SoundCloud
       </a>
-      <a href="https://youtube.com/@siraberiot?si=rMyxB-CqfobZVtaq" target="_blank">
+      <a href="https://youtube.com/@sogothimded?si=rMyxB-CqfobZVtaq" target="_blank">
         <img src="https://img.icons8.com/ios11/512/youtube-play.png" alt="YouTube">
         YouTube
       </a>
@@ -310,14 +256,34 @@
 
   <section id="shows">
     <h2>SHOWS / EVENTS</h2>
+    <p>Richmond, VA <br>July 12th, 2025 <br>9:30 PM</p>
     <div class="event">
-      TBA
+      <img src="https://i.ibb.co/Y7F65msw/47878392-3-D5-E-4405-A604-FE8-B9413-E3-E6.jpg" alt="Event Flyer" style="max-width: 100%; width: 300px;">
     </div>
   </section>
 
   <section id="store">
     <h2>STORE</h2>
-    <h3><strong>SIR ABE iSTRESS COLLECTION</strong></h3>
+
+    <h3><strong>#202501 CD</strong></h3>
+    <div class="product">
+      <a href="https://kunaki.com/sales.asp?PID=PX00ZRXF8N&pp=1" target="_blank">
+        <img src="https://i.ibb.co/3y8v7k8n/E008-BBC3-986-A-4205-B985-4-D565-CB35105.png" alt="#202501 CD" style="width: 100%; max-width: 300px; margin: 20px 0;">
+      </a>
+      <p><strong>Price:</strong> $8.00 (Plus Shipping)</p>
+      <p><a href="https://kunaki.com/sales.asp?PID=PX00ZRXF8N&pp=1" target="_blank" style="font-weight: bold; text-decoration: none; color: black; background-color: #f0f0f0; padding: 10px 20px; border-radius: 5px;">CLICK ME TO PURCHASE</a></p>
+    </div>
+
+    <h3><strong>#202501 VINYL</strong></h3>
+    <div class="product">
+      <a href="https://kunaki.com/VinylSales.asp?PID=PX00ZSZ8XN&OrderType=RetailSale&PP=1" target="_blank">
+        <img src="https://i.ibb.co/Z1cfV4q1/0-C5-ED4-F0-4379-402-B-AF07-4137936017-DC.png" alt="#202501 Vinyl" style="width: 100%; max-width: 300px; margin: 20px 0;">
+      </a>
+      <p><strong>Price:</strong> $36.00 (Plus Shipping)</p>
+      <p><a href="https://kunaki.com/VinylSales.asp?PID=PX00ZSZ8XN&OrderType=RetailSale&PP=1" target="_blank" style="font-weight: bold; text-decoration: none; color: black; background-color: #f0f0f0; padding: 10px 20px; border-radius: 5px;">CLICK ME TO PURCHASE</a></p>
+    </div>
+
+    <h3><strong>SIR ABE DEAD ALIVE COLLECTION</strong></h3>
     <div class="store-container">
       <iframe
         src="https://sir-abe-store.printify.me"
