@@ -6,13 +6,13 @@
   <title>$IR ABE</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Anton', sans-serif;
+      font-family: 'Archivo Black', sans-serif;
       background: #ffd6e7;
       color: white;
       text-align: center;
@@ -20,38 +20,57 @@
       overflow-x: hidden;
     }
 
-    /* STAR BACKGROUND */
+    /* STAR BACKGROUND – BIG + DENSE */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background-image: radial-gradient(white 1.5px, transparent 1.5px);
-      background-size: 40px 40px;
-      animation: stars 30s linear infinite;
+      background-image:
+        radial-gradient(white 3px, transparent 3px),
+        radial-gradient(white 2px, transparent 2px),
+        radial-gradient(white 1px, transparent 1px);
+      background-size:
+        28px 28px,
+        18px 18px,
+        10px 10px;
+      animation: stars 18s linear infinite;
       z-index: -1;
-      opacity: 0.7;
+      opacity: 0.85;
     }
 
     @keyframes stars {
       from { background-position: 0 0; }
-      to { background-position: 400px -400px; }
+      to { background-position: 500px -500px; }
     }
 
-    * {
-      text-shadow: 2px 2px 0 black, 0 0 10px rgba(255,255,255,0.4);
-      -webkit-text-stroke: 1px black;
+    /* TEXT OUTLINE WITHOUT OVERLAP */
+    body, p, a, span, div {
+      text-shadow:
+        2px 2px 0 black,
+        -2px 2px 0 black,
+        2px -2px 0 black,
+        -2px -2px 0 black,
+        0 0 12px rgba(255,255,255,0.35);
+    }
+
+    h2, .ticker {
+      text-shadow:
+        3px 3px 0 black,
+        -3px 3px 0 black,
+        3px -3px 0 black,
+        -3px -3px 0 black,
+        0 0 16px rgba(255,255,255,0.5);
     }
 
     .logo-wrap img {
       width: 280px;
       margin: 30px auto 10px;
-      filter: drop-shadow(4px 4px 0 black);
+      filter: drop-shadow(6px 6px 0 black);
     }
 
     /* TICKER */
     .ticker-wrap {
       overflow: hidden;
-      background: transparent;
       white-space: nowrap;
       font-family: Impact, sans-serif;
       font-size: 22px;
@@ -80,6 +99,7 @@
       background: #ffd6e7;
       padding: 14px 0;
       z-index: 1000;
+      border-bottom: 3px solid black;
     }
 
     .navbar a {
@@ -116,16 +136,16 @@
       border: 3px solid black;
       text-decoration: none;
       font-family: 'Oswald', sans-serif;
-      box-shadow: inset 0 2px 0 #ffd6e7, 4px 4px 0 black;
+      box-shadow: inset 0 3px 0 #ffd6e7, 5px 5px 0 black;
     }
 
-    /* SOCIALS */
+    /* SOCIALS – ICONS FIXED */
     .socials a {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      margin: 12px auto;
+      margin: 14px auto;
       width: fit-content;
       color: white;
       text-decoration: none;
@@ -136,7 +156,8 @@
     .socials img {
       width: 22px;
       image-rendering: pixelated;
-      filter: brightness(0) invert(1);
+      filter: none;
+      box-shadow: 2px 2px 0 black;
     }
 
     /* STORE */
@@ -166,7 +187,6 @@
       padding: 20px;
       color: black;
       text-shadow: none;
-      -webkit-text-stroke: 0;
       font-family: 'Oswald', sans-serif;
     }
 
@@ -191,11 +211,11 @@
 </head>
 <body>
 
-  <!-- MUSIC (requires user interaction on modern browsers) -->
+  <!-- MUSIC -->
   <iframe src="https://www.youtube.com/embed/QQ0swT8i0e8?autoplay=1&loop=1&playlist=QQ0swT8i0e8" allow="autoplay" style="display:none"></iframe>
 
   <div class="logo-wrap">
-    <img src="https://i.ibb.co/NnCFWYvK/B69-B5-FCF-864-C-44-A5-9166-54-FF2-C641796.png" alt="Sir Abe Logo">
+    <img src="https://i.ibb.co/NnCFWYvK/B69-B5-FCF-864-C-44-A5-9166-54-FF2-C641796.png">
   </div>
 
   <div class="ticker-wrap">
@@ -216,8 +236,7 @@
     <div class="release">
       <a href="https://distrokid.com/hyperfollow/irabe/rose-gold?ref=release" target="_blank">
         <img src="https://i.ibb.co/qZzVv7H/3000x3000-3263302-CFF82979-577-B-4-D3-A-B4-DC96-DE4-F3-EEA8-A-0-746244-IMG2091.jpg">
-      </a>
-      <br>
+      </a><br>
       <a class="release-btn" href="https://distrokid.com/hyperfollow/irabe/rose-gold?ref=release" target="_blank">CLICK ME FOR ROSE GOLD</a>
     </div>
 
@@ -243,47 +262,12 @@
     <p>TBA</p>
   </section>
 
-  <section>
-    <h2>Community Board</h2>
-    <div class="bulletin">
-      <input id="user" placeholder="USERNAME">
-      <textarea id="msg" placeholder="WRITE ANYTHING" rows="4"></textarea>
-      <button onclick="post()">POST</button>
-      <div id="posts"></div>
-    </div>
-  </section>
-
   <section id="about">
     <h2>About</h2>
     <p>Official website for $IR ABE.</p>
   </section>
 
-  <footer>
-    © 2026 $IR ABE
-  </footer>
-
-  <script>
-    const banned = ['rape','slur'];
-    const posts = JSON.parse(localStorage.getItem('posts') || '[]');
-    const el = document.getElementById('posts');
-
-    function render(){
-      el.innerHTML = posts.map(p=>`<p><b>${p.u}</b>: ${p.m}</p>`).join('');
-    }
-    render();
-
-    function post(){
-      if(localStorage.getItem('posted')) return alert('One message per visit');
-      const u = user.value.trim();
-      const m = msg.value.trim();
-      if(!u || !m) return;
-      if(banned.some(w=>m.toLowerCase().includes(w))) return alert('Message blocked');
-      posts.push({u,m});
-      localStorage.setItem('posts', JSON.stringify(posts));
-      localStorage.setItem('posted','1');
-      render();
-    }
-  </script>
+  <footer>© 2026 $IR ABE</footer>
 
 </body>
 </html>
