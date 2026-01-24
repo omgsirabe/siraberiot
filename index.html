@@ -6,13 +6,12 @@
   <title>$IR ABE</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Archivo Black', sans-serif;
+      font-family: 'Anton', Impact, 'Arial Black', sans-serif;
       background: #ffd6e7;
       color: white;
       text-align: center;
@@ -20,59 +19,43 @@
       overflow-x: hidden;
     }
 
-    /* STAR BACKGROUND – BIG + DENSE */
+    /* STAR BACKGROUND */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background-image:
-        radial-gradient(white 3px, transparent 3px),
-        radial-gradient(white 2px, transparent 2px),
-        radial-gradient(white 1px, transparent 1px);
-      background-size:
-        28px 28px,
-        18px 18px,
-        10px 10px;
-      animation: stars 18s linear infinite;
+      background-image: radial-gradient(white 3px, transparent 3px);
+      background-size: 22px 22px;
+      animation: stars 20s linear infinite;
       z-index: -1;
-      opacity: 0.85;
+      opacity: 0.9;
     }
 
     @keyframes stars {
       from { background-position: 0 0; }
-      to { background-position: 500px -500px; }
+      to { background-position: 300px -300px; }
     }
 
-    /* TEXT OUTLINE WITHOUT OVERLAP */
-    body, p, a, span, div {
+    /* CLEAN OUTLINE (NO OVERLAP) */
+    * {
       text-shadow:
-        2px 2px 0 black,
-        -2px 2px 0 black,
-        2px -2px 0 black,
-        -2px -2px 0 black,
-        0 0 12px rgba(255,255,255,0.35);
-    }
-
-    h2, .ticker {
-      text-shadow:
-        3px 3px 0 black,
-        -3px 3px 0 black,
-        3px -3px 0 black,
-        -3px -3px 0 black,
-        0 0 16px rgba(255,255,255,0.5);
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0 0 10px rgba(255,255,255,0.4);
     }
 
     .logo-wrap img {
       width: 280px;
       margin: 30px auto 10px;
-      filter: drop-shadow(6px 6px 0 black);
+      filter: drop-shadow(4px 4px 0 black);
     }
 
     /* TICKER */
     .ticker-wrap {
       overflow: hidden;
       white-space: nowrap;
-      font-family: Impact, sans-serif;
       font-size: 22px;
       margin-bottom: 10px;
     }
@@ -99,14 +82,12 @@
       background: #ffd6e7;
       padding: 14px 0;
       z-index: 1000;
-      border-bottom: 3px solid black;
     }
 
     .navbar a {
       margin: 0 18px;
       color: white;
       text-decoration: none;
-      font-family: 'Oswald', sans-serif;
       font-size: 18px;
     }
 
@@ -135,29 +116,26 @@
       color: white;
       border: 3px solid black;
       text-decoration: none;
-      font-family: 'Oswald', sans-serif;
-      box-shadow: inset 0 3px 0 #ffd6e7, 5px 5px 0 black;
+      box-shadow: inset 0 2px 0 #ffd6e7, 4px 4px 0 black;
     }
 
-    /* SOCIALS – ICONS FIXED */
+    /* SOCIALS */
     .socials a {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      margin: 14px auto;
+      margin: 12px auto;
       width: fit-content;
       color: white;
       text-decoration: none;
-      font-family: 'Oswald', sans-serif;
       font-size: 18px;
     }
 
     .socials img {
-      width: 22px;
+      width: 24px;
       image-rendering: pixelated;
-      filter: none;
-      box-shadow: 2px 2px 0 black;
+      filter: brightness(0) invert(1);
     }
 
     /* STORE */
@@ -187,18 +165,16 @@
       padding: 20px;
       color: black;
       text-shadow: none;
-      font-family: 'Oswald', sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     textarea, input {
       width: 100%;
       margin-bottom: 10px;
-      font-family: inherit;
     }
 
     button {
       padding: 6px 12px;
-      font-family: inherit;
       border: 2px solid black;
       background: #e0e0e0;
     }
@@ -211,7 +187,6 @@
 </head>
 <body>
 
-  <!-- MUSIC -->
   <iframe src="https://www.youtube.com/embed/QQ0swT8i0e8?autoplay=1&loop=1&playlist=QQ0swT8i0e8" allow="autoplay" style="display:none"></iframe>
 
   <div class="logo-wrap">
@@ -233,20 +208,34 @@
 
   <section id="home">
     <h2>Rose Gold (2 Pack) – 1/30</h2>
+
     <div class="release">
       <a href="https://distrokid.com/hyperfollow/irabe/rose-gold?ref=release" target="_blank">
         <img src="https://i.ibb.co/qZzVv7H/3000x3000-3263302-CFF82979-577-B-4-D3-A-B4-DC96-DE4-F3-EEA8-A-0-746244-IMG2091.jpg">
-      </a><br>
+      </a>
+      <br>
       <a class="release-btn" href="https://distrokid.com/hyperfollow/irabe/rose-gold?ref=release" target="_blank">CLICK ME FOR ROSE GOLD</a>
     </div>
 
     <div class="socials">
-      <a href="https://instagram.com/sirabe__" target="_blank"><img src="https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Apps-Instagram-icon.png">Instagram</a>
-      <a href="https://www.youtube.com/@siraberiot" target="_blank"><img src="https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-YouTube-icon.png">YouTube</a>
-      <a href="https://www.tiktok.com/@siraberiott" target="_blank"><img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/256/tiktok-icon.png">TikTok</a>
-      <a href="https://discord.gg/hEAJYdT5um" target="_blank"><img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/discord-icon.png">Discord</a>
-      <a href="https://sir-abe-store.printify.me/" target="_blank"><img src="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-document-open-icon.png">Store</a>
-      <a href="https://boxd.it/aph3x" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Letterboxd_2023_logo.png">Letterboxd</a>
+      <a href="https://instagram.com/sirabe__" target="_blank">
+        <img src="https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Apps-Instagram-icon.png">Instagram
+      </a>
+      <a href="https://www.youtube.com/@siraberiot" target="_blank">
+        <img src="https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-YouTube-icon.png">YouTube
+      </a>
+      <a href="https://www.tiktok.com/@siraberiott" target="_blank">
+        <img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/256/tiktok-icon.png">TikTok
+      </a>
+      <a href="https://discord.gg/hEAJYdT5um" target="_blank">
+        <img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/discord-icon.png">Discord
+      </a>
+      <a href="https://sir-abe-store.printify.me/" target="_blank">
+        <img src="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-document-open-icon.png">Store
+      </a>
+      <a href="https://boxd.it/aph3x" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Letterboxd_2023_logo.png">Letterboxd
+      </a>
     </div>
   </section>
 
@@ -262,12 +251,45 @@
     <p>TBA</p>
   </section>
 
+  <section>
+    <h2>Community Board</h2>
+    <div class="bulletin">
+      <input id="user" placeholder="USERNAME">
+      <textarea id="msg" placeholder="WRITE ANYTHING" rows="4"></textarea>
+      <button onclick="post()">POST</button>
+      <div id="posts"></div>
+    </div>
+  </section>
+
   <section id="about">
     <h2>About</h2>
     <p>Official website for $IR ABE.</p>
   </section>
 
   <footer>© 2026 $IR ABE</footer>
+
+  <script>
+    const banned = ['rape','slur'];
+    const posts = JSON.parse(localStorage.getItem('posts') || '[]');
+    const el = document.getElementById('posts');
+
+    function render(){
+      el.innerHTML = posts.map(p=>`<p><b>${p.u}</b>: ${p.m}</p>`).join('');
+    }
+    render();
+
+    function post(){
+      if(localStorage.getItem('posted')) return alert('One message per visit');
+      const u = user.value.trim();
+      const m = msg.value.trim();
+      if(!u || !m) return;
+      if(banned.some(w=>m.toLowerCase().includes(w))) return alert('Message blocked');
+      posts.push({u,m});
+      localStorage.setItem('posts', JSON.stringify(posts));
+      localStorage.setItem('posted','1');
+      render();
+    }
+  </script>
 
 </body>
 </html>
