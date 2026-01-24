@@ -3,284 +3,287 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>$ir Abe Official Site</title>
+  <title>$IR ABE</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     body {
-      background-color: black;
       margin: 0;
       font-family: 'Anton', sans-serif;
+      background: #ffd6e7;
       color: white;
       text-align: center;
       text-transform: uppercase;
       overflow-x: hidden;
     }
 
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 30px auto 10px;
-      max-width: 100%;
-      flex-wrap: nowrap;
-    }
-    .logo-wrap img.logo {
-      width: 250px;
-      max-width: 60%;
+    /* STAR BACKGROUND */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(white 1.5px, transparent 1.5px);
+      background-size: 40px 40px;
+      animation: stars 30s linear infinite;
+      z-index: -1;
+      opacity: 0.7;
     }
 
+    @keyframes stars {
+      from { background-position: 0 0; }
+      to { background-position: 400px -400px; }
+    }
+
+    * {
+      text-shadow: 2px 2px 0 black, 0 0 10px rgba(255,255,255,0.4);
+      -webkit-text-stroke: 1px black;
+    }
+
+    .logo-wrap img {
+      width: 280px;
+      margin: 30px auto 10px;
+      filter: drop-shadow(4px 4px 0 black);
+    }
+
+    /* TICKER */
     .ticker-wrap {
       overflow: hidden;
-      background-color: black;
-      color: limegreen;
-      font-family: Impact, Charcoal, sans-serif;
-      font-size: 22px;
+      background: transparent;
       white-space: nowrap;
-      box-sizing: border-box;
+      font-family: Impact, sans-serif;
+      font-size: 22px;
       margin-bottom: 10px;
     }
+
     .ticker {
       display: inline-block;
       padding-left: 100%;
-      animation: ticker 6s linear infinite;
+      animation: ticker 7s linear infinite;
     }
+
     @keyframes ticker {
-      0% { transform: translateX(0%); }
+      0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
     }
 
-    .ticker .hotpink-star {
-      color: hotpink;
+    .ticker .star {
+      color: #ff9fcf;
     }
 
+    /* NAV */
     .navbar {
-      background-color: black;
-      padding: 12px 0;
       position: sticky;
       top: 0;
+      background: #ffd6e7;
+      padding: 14px 0;
       z-index: 1000;
     }
+
     .navbar a {
-      color: white;
       margin: 0 18px;
+      color: white;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: 700;
       font-family: 'Oswald', sans-serif;
-      transition: 0.3s;
-    }
-    .navbar a:hover {
-      color: grey;
-      text-decoration: underline;
+      font-size: 18px;
     }
 
     section {
-      padding: 60px 20px;
-      border-bottom: 2px solid #333;
-    }
-    section h2 {
-      font-size: 36px;
-      margin-bottom: 25px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-    }
-    section p {
-      font-family: 'Oswald', sans-serif;
-      font-weight: 300;
+      padding: 70px 20px;
+      border-bottom: 3px solid black;
     }
 
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    /* RELEASE */
+    .release img {
+      width: 220px;
+      border: 5px solid black;
+      box-shadow: 6px 6px 0 black;
+    }
+
+    .release-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 36px;
+      background: linear-gradient(#ff9fcf, #ff5fa9);
+      color: white;
+      border: 3px solid black;
+      text-decoration: none;
+      font-family: 'Oswald', sans-serif;
+      box-shadow: inset 0 2px 0 #ffd6e7, 4px 4px 0 black;
+    }
+
+    /* SOCIALS */
     .socials a {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 12px 0;
+      gap: 10px;
+      margin: 12px auto;
+      width: fit-content;
       color: white;
-      font-size: 20px;
       text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s;
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
     }
-    .socials a img {
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
+
+    .socials img {
+      width: 22px;
+      image-rendering: pixelated;
       filter: brightness(0) invert(1);
     }
-    .socials a:hover {
-      color: grey;
-      text-decoration: underline;
-    }
 
-    .presave-container {
-      margin: 30px 0;
-    }
-    .presave-container img {
-      width: 180px;
-      max-width: 90%;
-      border: 5px solid limegreen;
-    }
-    .presave-button {
-      margin-top: 20px;
-    }
-    .presave-button a {
-      display: inline-block;
-      color: hotpink;
-      font-family: 'SF Pro Display', sans-serif;
-      font-weight: 500;
-      font-size: 14px;
-      padding: 14px 32px;
-      text-decoration: none;
-      border: 2px solid hotpink;
-      background: none;
-      text-shadow: none;
-    }
-
-    .event {
-      display: inline-block;
-      text-align: center;
-      margin-top: 20px;
-    }
-
+    /* STORE */
     .store-container {
-      width: 100%;
       max-width: 800px;
       margin: 20px auto;
-      border: 5px solid white;
-      padding: 0;
-      box-sizing: border-box;
-      position: relative;
+      border: 5px solid black;
       padding-top: 100%;
+      position: relative;
+      background: white;
     }
+
     .store-container iframe {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       border: none;
     }
 
-    footer {
-      margin-top: 50px;
+    /* BULLETIN */
+    .bulletin {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #c0c0c0;
+      border: 4px ridge #fff;
       padding: 20px;
-      font-size: 12px;
-      color: white;
+      color: black;
+      text-shadow: none;
+      -webkit-text-stroke: 0;
+      font-family: 'Oswald', sans-serif;
     }
 
-    @media (max-width: 768px) {
-      .navbar a {
-        margin: 10px 12px;
-        font-size: 16px;
-      }
-      section h2 {
-        font-size: 28px;
-      }
-      .socials a {
-        font-size: 18px;
-      }
-      .store-container {
-        width: 100%;
-        padding-top: 120%;
-      }
+    textarea, input {
+      width: 100%;
+      margin-bottom: 10px;
+      font-family: inherit;
     }
-    html {
-      scroll-behavior: smooth;
+
+    button {
+      padding: 6px 12px;
+      font-family: inherit;
+      border: 2px solid black;
+      background: #e0e0e0;
+    }
+
+    footer {
+      font-size: 12px;
+      padding: 30px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo -->
+  <!-- MUSIC (requires user interaction on modern browsers) -->
+  <iframe src="https://www.youtube.com/embed/QQ0swT8i0e8?autoplay=1&loop=1&playlist=QQ0swT8i0e8" allow="autoplay" style="display:none"></iframe>
+
   <div class="logo-wrap">
-    <img class="logo" src="https://i.ibb.co/FLtqy1NJ/6-A2-B29-E5-6-F06-4170-B2-C6-26410-E319072.png" alt="Sir Abe Logo">
+    <img src="https://i.ibb.co/NnCFWYvK/B69-B5-FCF-864-C-44-A5-9166-54-FF2-C641796.png" alt="Sir Abe Logo">
   </div>
 
-  <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker">
-      <span class="hotpink-star">★</span> WELCOME TO HELL, WE LOVE YOU HERE! <span class="hotpink-star">★</span>
+      <span class="star">★</span> WELCOME TO HELL, WE LOVE YOU HERE! <span class="star">★</span>
     </div>
   </div>
 
-  <!-- Navbar -->
   <div class="navbar">
-    <a href="#home">HOME</a>
-    <a href="#shows">SHOWS/EVENTS</a>
-    <a href="#store">STORE</a>
-    <a href="#about">ABOUT</a>
+    <a href="#home">Home</a>
+    <a href="#store">Store</a>
+    <a href="#shows">Shows</a>
+    <a href="#about">About</a>
   </div>
 
-  <!-- Sections -->
   <section id="home">
-    <h2>HOME</h2>
-    <div class="presave-container">
-      <a href="https://distrokid.com/hyperfollow/irabe/sweetener-3-pack" target="_blank">
-        <img src="https://i.ibb.co/QvqCpbBt/755-B9-F3-A-F8-D3-44-DD-8-A50-C378-A796555-D.jpg" alt="Sweetener Cover Art">
+    <h2>Rose Gold (2 Pack) – 1/30</h2>
+    <div class="release">
+      <a href="https://distrokid.com/hyperfollow/irabe/rose-gold?ref=release" target="_blank">
+        <img src="https://i.ibb.co/qZzVv7H/3000x3000-3263302-CFF82979-577-B-4-D3-A-B4-DC96-DE4-F3-EEA8-A-0-746244-IMG2091.jpg">
       </a>
-      <div class="presave-button">
-        <a href="https://distrokid.com/hyperfollow/irabe/sweetener-3-pack" target="_blank">CLICK ME FOR SWEETENER</a>
-      </div>
+      <br>
+      <a class="release-btn" href="https://distrokid.com/hyperfollow/irabe/rose-gold?ref=release" target="_blank">CLICK ME FOR ROSE GOLD</a>
     </div>
+
     <div class="socials">
-      <a href="https://www.instagram.com/omgsirabe?igsh=djU3cXh4eDE2Z200&utm_source=qr" target="_blank">
-        <img src="https://static.vecteezy.com/system/resources/previews/023/986/885/non_2x/instagram-logo-instagram-logo-transparent-instagram-icon-transparent-free-free-png.png" alt="Instagram">
-        Instagram
-      </a>
-      <a href="https://music.apple.com/us/artist/%24ir-abe/1583168116" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/512/apple-music.png" alt="Apple Music">
-        Apple Music
-      </a>
-      <a href="https://open.spotify.com/artist/0uY7BTLDOC5WbA3SlZYUV8?si=QgUvZ-qgRr-W0i_7Q5gPoA" target="_blank">
-        <img src="https://images.icon-icons.com/2428/PNG/512/spotify_black_logo_icon_147079.png" alt="Spotify">
-        Spotify
-      </a>
-      <a href="https://on.soundcloud.com/spVot4nuw6mQ3Adp8" target="_blank">
-        <img src="https://www.iconninja.com/files/313/200/942/soundcloud-black-icon.png" alt="SoundCloud">
-        SoundCloud
-      </a>
-      <a href="https://youtube.com/@sogothimded?si=rMyxB-CqfobZVtaq" target="_blank">
-        <img src="https://img.icons8.com/ios11/512/youtube-play.png" alt="YouTube">
-        YouTube
-      </a>
-      <a href="https://x.com/siraberiot" target="_blank">
-        <img src="https://www.sendible.com/hs-fs/hubfs/blog-import/2024/02-24-Feb/social-media-icons-x-logo-black.png?width=120&height=123&name=social-media-icons-x-logo-black.png" alt="X">
-        X / Twitter
-      </a>
+      <a href="https://instagram.com/sirabe__" target="_blank"><img src="https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Apps-Instagram-icon.png">Instagram</a>
+      <a href="https://www.youtube.com/@siraberiot" target="_blank"><img src="https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-YouTube-icon.png">YouTube</a>
+      <a href="https://www.tiktok.com/@siraberiott" target="_blank"><img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/256/tiktok-icon.png">TikTok</a>
+      <a href="https://discord.gg/hEAJYdT5um" target="_blank"><img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/discord-icon.png">Discord</a>
+      <a href="https://sir-abe-store.printify.me/" target="_blank"><img src="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-document-open-icon.png">Store</a>
+      <a href="https://boxd.it/aph3x" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Letterboxd_2023_logo.png">Letterboxd</a>
+    </div>
+  </section>
+
+  <section id="store">
+    <h2>Store</h2>
+    <div class="store-container">
+      <iframe src="https://sir-abe-store.printify.me"></iframe>
     </div>
   </section>
 
   <section id="shows">
-    <h2>SHOWS / EVENTS</h2>
+    <h2>Shows / Events</h2>
     <p>TBA</p>
   </section>
 
-  <section id="store">
-    <h2>STORE</h2>
-    <h3><strong>SIR ABE DEAD ALIVE COLLECTION</strong></h3>
-    <div class="store-container">
-      <iframe
-        src="https://sir-abe-store.printify.me"
-        scrolling="yes"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
+  <section>
+    <h2>Community Board</h2>
+    <div class="bulletin">
+      <input id="user" placeholder="USERNAME">
+      <textarea id="msg" placeholder="WRITE ANYTHING" rows="4"></textarea>
+      <button onclick="post()">POST</button>
+      <div id="posts"></div>
     </div>
   </section>
 
   <section id="about">
-    <h2>ABOUT</h2>
-    <p>THIS IS THE OFFICIAL WEBSITE FOR THE ARTIST $IR ABE. WE USE COOKIES AND SIMILAR TECHNOLOGIES TO ENHANCE YOUR EXPERIENCE AND PROVIDE SERVICES. INFORMATION COLLECTED ON THIS SITE WILL BE HANDLED ACCORDING TO PRIVACY AND SECURITY POLICIES. BY USING THIS WEBSITE, YOU AGREE TO THESE TERMS.</p>
-    <p>ALL RIGHTS RESERVED. UNAUTHORIZED USE OR DUPLICATION IS PROHIBITED.</p>
+    <h2>About</h2>
+    <p>Official website for $IR ABE.</p>
   </section>
 
   <footer>
-    © 2025 $IR ABE. ALL RIGHTS RESERVED. FOR BOOKING INQUIRIES, PRESS, OR COLLABORATIONS, CONTACT DEREK BOOTH AT DEREKBOOTHH@GMAIL.COM.
+    © 2026 $IR ABE
   </footer>
+
+  <script>
+    const banned = ['rape','slur'];
+    const posts = JSON.parse(localStorage.getItem('posts') || '[]');
+    const el = document.getElementById('posts');
+
+    function render(){
+      el.innerHTML = posts.map(p=>`<p><b>${p.u}</b>: ${p.m}</p>`).join('');
+    }
+    render();
+
+    function post(){
+      if(localStorage.getItem('posted')) return alert('One message per visit');
+      const u = user.value.trim();
+      const m = msg.value.trim();
+      if(!u || !m) return;
+      if(banned.some(w=>m.toLowerCase().includes(w))) return alert('Message blocked');
+      posts.push({u,m});
+      localStorage.setItem('posts', JSON.stringify(posts));
+      localStorage.setItem('posted','1');
+      render();
+    }
+  </script>
 
 </body>
 </html>
